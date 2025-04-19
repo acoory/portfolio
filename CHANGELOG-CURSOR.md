@@ -165,4 +165,36 @@ Ce fichier documente les modifications apportées au projet par l'assistant Curs
 - Création d'un contexte pour gérer le thème global
 - Types TypeScript pour améliorer la robustesse du code
 - Création de composants plus petits et spécialisés
-- Extraction des animations et des données dans des fichiers séparés 
+- Extraction des animations et des données dans des fichiers séparés
+
+## 2023-XX-XX : Ajout d'un fond d'étoiles animé
+
+### Fichiers modifiés/créés :
+- `src/components/StarsBackground.tsx` : Création d'un nouveau composant pour l'animation d'étoiles
+- `src/styles/StarsBackground.css` : Styles et animations pour le fond d'étoiles
+- `src/App.tsx` : Intégration du composant StarsBackground
+
+### Changements apportés :
+- Création d'un fond d'étoiles minimaliste et élégant inspiré des interfaces modernes
+- Animation douce des étoiles qui descendent lentement dans le fond
+- Utilisation de couleurs violettes/indigo plus saturées pour le mode clair afin d'assurer une bonne visibilité
+- Ajout d'un léger dégradé en bas de page pour créer de la profondeur
+- Optimisation de la performance avec des animations CSS pures
+- Adaptation automatique au thème clair/sombre
+
+## 2023-XX-XX : Amélioration visuelle de l'interface
+
+### Fichiers modifiés :
+- `src/App.css` : Ajout d'un gradient de fond subtil qui s'adapte au mode clair/sombre
+- `src/components/Header.tsx` : Refonte de l'animation du texte d'introduction
+
+### Changements apportés :
+- Ajout d'un dégradé de fond élégant qui change selon le thème :
+  - Mode clair : dégradé doux de teintes bleu-lavande très claires
+  - Mode sombre : dégradé de tons bleu-indigo foncés
+- Animation dynamique du texte d'introduction "Salut, je suis Prénom Nom 👋" :
+  - Animation lettre par lettre avec un effet de ressort naturel
+  - Mise en valeur du nom avec un gradient de couleur indigo-violet
+  - Animation spéciale et interactive pour l'emoji de salutation
+  - Séquencement optimisé pour une apparition fluide des éléments
+- Amélioration globale de l'expérience utilisateur dès l'arrivée sur la page 
