@@ -2,6 +2,15 @@
 
 ## 2023-11-01
 
+### Ajout de la détection du thème préféré de l'utilisateur
+- **Fichier modifié** : `src/context/ThemeContext.tsx`
+- **Changements** : Ajout de la détection automatique du thème préféré par l'utilisateur (clair/sombre) et synchronisation avec les préférences système.
+- **Détails** : 
+  - Utilisation de la media query `prefers-color-scheme: dark` pour détecter le thème préféré
+  - Initialisation du thème de l'application selon cette préférence
+  - Ajout d'un écouteur pour détecter les changements de préférence en temps réel
+  - Maintien de la possibilité de changer manuellement le thème via le bouton dans la navbar
+
 ### Amélioration du centrage de la Navbar (2e tentative)
 - **Fichier modifié** : `src/App.css`
 - **Changements** : Refonte complète de l'approche de centrage de la navbar pour garantir un alignement parfait.

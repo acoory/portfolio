@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 import { ThemeContextType } from '../types/types';
 
 // Création du contexte avec une valeur par défaut
@@ -11,7 +11,33 @@ interface ThemeProviderProps {
 
 // Provider qui expose le state et les méthodes
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(false);
+  // Détection des préférences système pour le thème
+  const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  // Initialisation du thème en fonction des préférences système
+  const [darkMode, setDarkMode] = useState(prefersDarkMode);
+
+  // Écouteur pour les changements de préférence système
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    const handleChange = (e: MediaQueryListEvent) => {
+      setDarkMode(e.matches);
+    };
+    
+    // Ancien navigateurs utilisent addListener/removeListener
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    } else {
+      // @ts-ignore - Pour la compatibilité avec d'anciens navigateurs
+      mediaQuery.addListener(handleChange);
+      return () => {
+        // @ts-ignore
+        mediaQuery.removeListener(handleChange);
+      };
+    }
+  }, []);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
