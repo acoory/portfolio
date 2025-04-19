@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
 
@@ -29,6 +29,15 @@ import { pageTransition } from './animations/variants';
 
 function App() {
   const { darkMode } = useTheme();
+
+  // Appliquer la classe dark/light à l'élément html
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
 
   // Contenu de la section À propos
   const aboutContent = `Fin 2022, j'ai quitté mon poste d'ingénieur logiciel pour me consacrer à plein temps à la création et au développement de mes propres entreprises SaaS. 

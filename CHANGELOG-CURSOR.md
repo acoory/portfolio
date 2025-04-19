@@ -2,6 +2,14 @@
 
 ## 2023-11-01
 
+### Correction du problème d'overscroll en mode sombre
+- **Fichiers modifiés** : `src/App.css`, `src/App.tsx`
+- **Changements** : Correction du problème d'affichage de zones blanches lors du surscroll en haut de page en mode sombre.
+- **Détails** :
+  - Ajout de `overscroll-behavior: none` pour empêcher l'effet de rebond
+  - Application de la couleur de fond appropriée sur l'élément `html`
+  - Ajout d'un effet dans App.tsx pour basculer la classe `dark` sur l'élément `html` en fonction du thème
+
 ### Ajout de la détection du thème préféré de l'utilisateur
 - **Fichier modifié** : `src/context/ThemeContext.tsx`
 - **Changements** : Ajout de la détection automatique du thème préféré par l'utilisateur (clair/sombre) et synchronisation avec les préférences système.
