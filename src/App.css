@@ -1,38 +1,447 @@
+:root {
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary-color: #6366f1;
+  --light-bg: #ffffff;
+  --dark-bg: #121212;
+  --light-text: #374151;
+  --dark-text: #f3f4f6;
+  --light-card: #ffffff;
+  --dark-card: #1f2937;
+  --container-width: 800px;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  transition: background-color 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.App.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.App.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.main-container {
+  max-width: var(--container-width);
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  max-width: 70%;
+}
+
+.App.dark .subtitle {
+  color: #9ca3af;
+}
+
+.name-logo {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
   color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Section Styles */
+.section {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App.dark .section {
+  border-bottom-color: #374151;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--light-text);
+}
+
+.App.dark .section h2 {
+  color: var(--dark-text);
+}
+
+.section-intro {
+  margin-bottom: 1.5rem;
+  color: #6b7280;
+}
+
+.App.dark .section-intro {
+  color: #9ca3af;
+}
+
+/* Timeline Items (Experience & Education) */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-item, .education-item, .hackathon-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.company-logo, .education-logo, .hackathon-logo {
+  width: 36px;
+  height: 36px;
+  background-color: #e5e7eb;
+  color: #4b5563;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.App.dark .company-logo, 
+.App.dark .education-logo, 
+.App.dark .hackathon-logo {
+  background-color: #374151;
+  color: #9ca3af;
+}
+
+.experience-content, .education-content, .hackathon-content {
+  flex: 1;
+}
+
+.experience-content h3, .education-content h3, .hackathon-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.hackathon-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.date, .location {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.App.dark .date, 
+.App.dark .location {
+  color: #9ca3af;
+}
+
+.job-title, .degree {
+  font-size: 0.9rem;
+}
+
+/* Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.App.dark .skill {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+/* Projects */
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--light-card);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.App.dark .project-card {
+  background-color: var(--dark-card);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.App.dark .project-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-card .date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.App.dark .project-card .date {
+  color: #9ca3af;
+}
+
+.project-card .description {
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tech {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border-radius: 0.25rem;
+}
+
+.App.dark .tech {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  font-size: 0.875rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-links a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Hackathons */
+.hackathons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.hackathon-item {
+  margin-bottom: 0.5rem;
+}
+
+.hackathon-content .description {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Contact */
+#contact p {
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.theme-toggle {
+  padding: 0.5rem 1rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+}
+
+.App.dark .theme-toggle {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.theme-toggle:hover {
+  background-color: #e5e7eb;
+}
+
+.App.dark .theme-toggle:hover {
+  background-color: #374151;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+  
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro {
+    flex-direction: column;
+  }
+  
+  .subtitle {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .name-logo {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Styles pour la navbar en bas */
+.navbar {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-container {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(23, 23, 23, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  left: 0;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e5e5;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.nav-icon:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .navbar-container {
+  background-color: rgba(35, 35, 35, 0.8);
+}
+
+.light .navbar-container {
+  background-color: rgba(35, 35, 35, 0.8);
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .navbar-container {
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+  
+  .nav-icon {
+    width: 38px;
+    height: 38px;
   }
 }

@@ -2,6 +2,11 @@
 
 ## 2023-11-01
 
+### Correction du centrage de la Navbar
+- **Fichier modifié** : `src/App.css`
+- **Changements** : Modification des styles CSS pour améliorer le centrage horizontal de la navbar.
+- **Détails** : Ajout des propriétés `margin: 0 auto`, `display: flex`, `justify-content: center` à la classe `.navbar` et `position: relative`, `left: 0` à `.navbar-container` pour assurer un centrage parfait de la navbar en bas de l'écran.
+
 ### Intégration de la Navbar
 - **Fichier modifié** : `src/App.tsx`
 - **Changements** : Ajout de l'import du composant Navbar et intégration dans le rendu de l'application.
