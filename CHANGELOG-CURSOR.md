@@ -2,6 +2,11 @@
 
 ## 2023-11-01
 
+### Amélioration du centrage de la Navbar (2e tentative)
+- **Fichier modifié** : `src/App.css`
+- **Changements** : Refonte complète de l'approche de centrage de la navbar pour garantir un alignement parfait.
+- **Détails** : Remplacement de la méthode de centrage basée sur `transform` par une technique utilisant `left: 0, right: 0, width: 100%` avec `justify-content: center`. Ajout de `pointer-events: none` sur le conteneur parent et `pointer-events: auto` sur les boutons pour assurer un comportement correct des clics.
+
 ### Correction du centrage de la Navbar
 - **Fichier modifié** : `src/App.css`
 - **Changements** : Modification des styles CSS pour améliorer le centrage horizontal de la navbar.
