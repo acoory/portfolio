@@ -1,7 +1,10 @@
 :root {
-  --primary-color: #3b82f6;
-  --primary-hover: #2563eb;
-  --secondary-color: #6366f1;
+  --primary-color: #4f46e5; /* Indigo-600 */
+  --primary-hover: #4338ca; /* Indigo-700 */
+  --secondary-color: #8b5cf6; /* Violet-500 */
+  --secondary-hover: #7c3aed; /* Violet-600 */
+  --gradient-light: linear-gradient(to right, #4f46e5, #8b5cf6);
+  --gradient-dark: linear-gradient(to right, #6366f1, #a78bfa);
   --light-bg: #ffffff;
   --dark-bg: #121212;
   --light-text: #374151;
@@ -102,7 +105,7 @@ body {
 .name-logo {
   width: 50px;
   height: 50px;
-  background-color: var(--primary-color);
+  background-image: var(--gradient-light);
   color: white;
   border-radius: 6px;
   display: flex;
@@ -110,6 +113,21 @@ body {
   justify-content: center;
   font-weight: bold;
   font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.name-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.App.dark .name-logo {
+  background-image: var(--gradient-dark);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.App.dark .name-logo:hover {
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
 }
 
 /* Section Styles */
@@ -128,10 +146,32 @@ body {
   font-weight: 600;
   margin-bottom: 1.25rem;
   color: var(--light-text);
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 30%;
+  height: 3px;
+  background-image: var(--gradient-light);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.section h2:hover::after {
+  width: 100%;
 }
 
 .App.dark .section h2 {
   color: var(--dark-text);
+}
+
+.App.dark .section h2::after {
+  background-image: var(--gradient-dark);
 }
 
 .section-intro {
@@ -167,6 +207,14 @@ body {
   justify-content: center;
   font-weight: bold;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.company-logo:hover, .education-logo:hover, .hackathon-logo:hover {
+  background-image: var(--gradient-light);
+  color: white;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
 }
 
 .App.dark .company-logo, 
@@ -174,6 +222,14 @@ body {
 .App.dark .hackathon-logo {
   background-color: #374151;
   color: #9ca3af;
+}
+
+.App.dark .company-logo:hover, 
+.App.dark .education-logo:hover, 
+.App.dark .hackathon-logo:hover {
+  background-image: var(--gradient-dark);
+  color: white;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
 }
 
 .experience-content, .education-content, .hackathon-content {
@@ -222,11 +278,25 @@ body {
   color: #374151;
   border-radius: 0.25rem;
   display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.skill:hover {
+  background-image: var(--gradient-light);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(79, 70, 229, 0.2);
 }
 
 .App.dark .skill {
   background-color: #1f2937;
   color: #e5e7eb;
+}
+
+.App.dark .skill:hover {
+  background-image: var(--gradient-dark);
+  color: white;
+  box-shadow: 0 3px 8px rgba(99, 102, 241, 0.3);
 }
 
 /* Projects */
@@ -241,7 +311,8 @@ body {
   border-radius: var(--border-radius);
   background-color: var(--light-card);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .App.dark .project-card {
@@ -250,12 +321,14 @@ body {
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(79, 70, 229, 0.1);
 }
 
 .App.dark .project-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
 .project-card h3 {
@@ -292,11 +365,24 @@ body {
   background-color: #f3f4f6;
   color: #374151;
   border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.tech:hover {
+  background-image: var(--gradient-light);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(79, 70, 229, 0.2);
 }
 
 .App.dark .tech {
   background-color: #1f2937;
   color: #e5e7eb;
+}
+
+.App.dark .tech:hover {
+  background-image: var(--gradient-dark);
+  box-shadow: 0 2px 5px rgba(99, 102, 241, 0.3);
 }
 
 .project-links {
@@ -309,11 +395,21 @@ body {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .project-links a:hover {
-  color: var(--primary-hover);
-  text-decoration: underline;
+  color: white;
+  background-image: var(--gradient-light);
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
+}
+
+.App.dark .project-links a:hover {
+  background-image: var(--gradient-dark);
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
 }
 
 /* Hackathons */
@@ -355,7 +451,7 @@ body {
   border-radius: var(--border-radius);
   cursor: pointer;
   font-size: 0.875rem;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .App.dark .theme-toggle {
@@ -364,11 +460,15 @@ body {
 }
 
 .theme-toggle:hover {
-  background-color: #e5e7eb;
+  background-image: var(--gradient-light);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(79, 70, 229, 0.3);
 }
 
 .App.dark .theme-toggle:hover {
-  background-color: #374151;
+  background-image: var(--gradient-dark);
+  box-shadow: 0 3px 8px rgba(99, 102, 241, 0.3);
 }
 
 /* Responsive */
@@ -438,7 +538,9 @@ body {
 
 .nav-icon:hover {
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-image: var(--gradient-light);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dark .navbar-container {

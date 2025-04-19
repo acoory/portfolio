@@ -198,3 +198,24 @@ Ce fichier documente les modifications apportées au projet par l'assistant Curs
   - Animation spéciale et interactive pour l'emoji de salutation
   - Séquencement optimisé pour une apparition fluide des éléments
 - Amélioration globale de l'expérience utilisateur dès l'arrivée sur la page 
+
+## 2023-XX-XX : Harmonisation visuelle avec le thème indigo-violet
+
+### Fichiers modifiés :
+- `src/App.css` : Refonte globale du système de couleurs et ajout d'effets interactifs harmonisés
+
+### Changements apportés :
+- Création d'un système de couleurs cohérent basé sur les teintes indigo-violet :
+  - Mise à jour des variables CSS avec un jeu de couleurs primaires et secondaires
+  - Ajout de gradients prédéfinis pour les modes clair et sombre
+- Amélioration visuelle des éléments interactifs :
+  - Effet de gradient sur le hover des badges de compétences
+  - Animation subtile des liens au survol avec transition vers le gradient
+  - Bordure élégante pour les sections avec effet d'expansion au survol
+  - Transformation et élévation des cartes de projet avec bordure subtile
+  - Effet de gradient sur les logos d'entreprise et logos d'éducation
+- Optimisation des micro-interactions :
+  - Tous les éléments interactifs ont désormais une transition fluide
+  - Effets de transformation légère (translation, échelle) sur les interactions
+  - Ombres portées adaptées aux modes clair/sombre
+- Cohérence visuelle renforcée entre tous les éléments de l'interface 
