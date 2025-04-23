@@ -219,3 +219,67 @@ Ce fichier documente les modifications apportées au projet par l'assistant Curs
   - Effets de transformation légère (translation, échelle) sur les interactions
   - Ombres portées adaptées aux modes clair/sombre
 - Cohérence visuelle renforcée entre tous les éléments de l'interface 
+
+## 2024-07-15
+
+### Modifications de src/data/projects.ts
+- Conservé le projet original "Application de Vidéosurveillance IA" (igaar)
+- Ajouté 5 nouveaux projets :
+  - DigitalExpress - Solution personnalisée pour les restaurateurs
+  - Tutoriel Ansible - Guide d'installation et configuration d'Ansible
+  - Le Bouddoir - Site web pour un restaurant à Aix-en-Provence
+  - La Panthère SEO - Projet d'optimisation SEO
+  - OhMyFood - Intégration mobile-first pour une startup de restauration
+
+### Modifications des types et descriptions de projets
+- Ajout d'une propriété `richDescription` de type React.ReactNode à l'interface Project
+- Raccourcissement des descriptions textuelles des projets
+- Ajout de descriptions enrichies en HTML pour chaque projet, avec mise en forme, listes à puces et emphases
+
+### Ajout d'une barre de navigation principale (TopNavbar)
+- Création d'une barre de navigation fixée en haut de page
+- Implémentation de liens vers toutes les sections du portfolio (Accueil, Expérience, Formation, etc.)
+- Ajout d'un système de détection automatique de la section active pendant le défilement
+- Design adaptatif qui s'ajuste automatiquement aux différentes tailles d'écran
+- Mise en valeur visuelle de l'élément de menu actif
+- Conservation de la navbar sociale existante en bas de page
+- Ajout d'identifiants de section pour permettre la navigation par ancre 
+
+## 2023-07-01
+
+### Modifications apportées
+
+#### src/App.css
+- Réparation du style `:hover` sur les icônes de navigation qui avait été supprimé
+- Ajout d'un effet de transformation et d'ombre au survol des icônes pour améliorer l'expérience utilisateur
+- Ajout d'un effet de changement de couleur au survol pour une meilleure rétroaction visuelle
+
+### Résumé des améliorations
+Les modifications apportées rétablissent l'effet de survol sur les icônes de la barre de navigation, ce qui améliore l'interaction utilisateur et rend l'interface plus intuitive. L'ajout d'effets visuels (transformation, ombre, changement de couleur) renforce le feedback visuel lorsque l'utilisateur interagit avec les éléments de navigation. 
+
+## 11 juillet 2024
+
+### Modifications
+
+**Fichier modifié**: `src/App.css`
+
+- Amélioration de l'effet de survol sur les icônes de navigation :
+  - Augmentation de l'amplitude de l'effet d'élévation : modification de `translateY(-2px)` à `translateY(-3px)`
+  - Renforcement de l'effet d'ombre : passage de `0 3px 8px rgba(79, 70, 229, 0.25)` à `0 5px 12px rgba(79, 70, 229, 0.35)`
+  - Ces modifications améliorent le retour visuel lorsque l'utilisateur survole les icônes de navigation
+
+Ces changements renforcent l'interaction visuelle et améliorent l'expérience utilisateur en rendant les effets de survol plus prononcés et dynamiques. 
+
+## 2023-07-04
+
+### Fichiers modifiés
+- `src/App.css`
+
+### Changements apportés
+- Harmonisation des styles entre les barres de navigation (haut et bas)
+- Ajout de l'effet blur (backdrop-filter) sur la navbar du bas
+- Amélioration de la cohérence visuelle entre les modes clair et sombre
+- Standardisation de la taille des éléments et des espacements
+- Ajout de styles pour les icônes et les états actifs dans la navbar
+- Utilisation de la variable `--container-width` pour une meilleure cohérence
+- Ajustement des effets de survol et des animations pour une expérience utilisateur plus fluide
