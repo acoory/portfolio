@@ -2,6 +2,18 @@
 
 ## 11 juillet 2024
 
+### Fichiers modifiés
+- `.github/workflows/deploy.yml`
+
+### Changements apportés
+- Mise à jour des actions GitHub dans le workflow de déploiement
+  - Passage de `actions/checkout` de v3 à v4
+  - Passage de `actions/setup-node` de v3 à v4
+  - Passage de `actions/configure-pages` de v3 à v4
+  - Passage de `actions/upload-pages-artifact` de v2 à v3
+  - Passage de `actions/deploy-pages` de v2 à v4
+  - Résolution de l'erreur de dépréciation liée à `actions/upload-artifact: v3`
+
 ### Fichiers créés/modifiés
 - `.github/workflows/deploy.yml`
 - `package.json`
