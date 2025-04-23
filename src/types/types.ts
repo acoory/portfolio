@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface Experience {
   id: string;
   company: string;
@@ -28,6 +30,7 @@ export interface Project {
   title: string;
   period: string;
   description: string;
+  richDescription?: React.ReactNode;
   technologies: string[];
   websiteUrl?: string;
   sourceUrl?: string;

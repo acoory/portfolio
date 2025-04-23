@@ -65,6 +65,28 @@ export const experiences: Experience[] = [
     )
   },
   {
+    id: 'exp5',
+    company: 'Your Job',
+    logo: 'Y',
+    role: 'Développeur Frontend Freelance',
+    period: 'Jan 2025 - Mars 2025',
+    location: 'À distance',
+    richDescription: (
+        <>
+          <p className="project-title">Développement de la plateforme Your Job</p>
+          <p>Développement du frontend d’une application web de recherche d’emploi, dans le cadre d’une mission freelance.</p>
+          <ul>
+            <li>Initialisation du projet avec React et TypeScript</li>
+            <li>Application des principes SOLID et Clean Architecture</li>
+            <li>Intégration pixel-perfect des maquettes fournies</li>
+            <li>Création de composants UI réutilisables</li>
+            <li>Optimisation des performances et respect des bonnes pratiques</li>
+            <li>Collaboration directe avec le client pour les ajustements fonctionnels</li>
+          </ul>
+        </>
+    )
+  },
+  {
     id: 'exp3',
     company: 'Digital Express',
     logo: 'D',
