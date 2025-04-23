@@ -91,7 +91,6 @@ body {
 
 /* Header */
 .header {
-  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -503,36 +502,44 @@ body {
   display: flex;
   gap: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: rgba(31, 41, 55, 0.8);
+  background-color: rgba(247, 247, 255, 0.85);
   backdrop-filter: blur(10px);
   border-radius: 9999px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(79, 70, 229, 0.08);
   pointer-events: auto;
 }
 
-.light .navbar-container {
-  background-color: rgba(31, 41, 55, 0.8);
+.App.dark .navbar-container {
+  background-color: rgba(24, 24, 36, 0.85);
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.25);
+  border: 1px solid rgba(79, 70, 229, 0.15);
 }
 
 .nav-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e5e5e5;
+  color: var(--text-light);
   width: 42px;
   height: 42px;
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   background-color: transparent;
   border: none;
   padding: 0;
 }
 
+.App.dark .nav-icon {
+  color: var(--text-dark);
+}
+
 .nav-icon:hover {
-  color: #ffffff;
+  color: white;
   background-image: var(--gradient-primary);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(79, 70, 229, 0.35);
 }
 
 @media (max-width: 640px) {

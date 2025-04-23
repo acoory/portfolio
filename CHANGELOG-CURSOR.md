@@ -283,3 +283,18 @@ Ces changements renforcent l'interaction visuelle et améliorent l'expérience u
 - Ajout de styles pour les icônes et les états actifs dans la navbar
 - Utilisation de la variable `--container-width` pour une meilleure cohérence
 - Ajustement des effets de survol et des animations pour une expérience utilisateur plus fluide
+
+## 11 juillet 2024
+
+### Fichiers modifiés
+- `src/App.css`
+
+### Changements apportés
+- Harmonisation des couleurs de la navbar avec le reste de l'application
+  - Modification de l'arrière-plan pour utiliser la même palette de couleurs que la barre de navigation du haut
+  - Utilisation des variables CSS existantes pour les couleurs de texte et les effets
+  - Ajout d'une bordure légère cohérente avec le reste de l'interface
+  - Amélioration de l'effet de survol sur les icônes (ombre plus prononcée, élévation accrue)
+  - Correction des sélecteurs pour respecter la structure des classes de l'application
+
+Ces changements assurent une meilleure cohérence visuelle dans toute l'application, particulièrement pour la barre de navigation inférieure qui suit maintenant la même charte graphique que les autres éléments de l'interface.
