@@ -6,6 +6,10 @@
 - `src/components/Header.tsx` 
 - `src/components/TopNavbar.tsx`
 - `.github/workflows/deploy.yml`
+- `package.json`
+- `public/index.html`
+- `public/404.html`
+- `public/manifest.json`
 
 ### Changements apportés
 - Correction des erreurs ESLint qui causaient l'échec du build
@@ -21,11 +25,14 @@
   - Passage de `actions/deploy-pages` de v2 à v4
   - Résolution de l'erreur de dépréciation liée à `actions/upload-artifact: v3`
 
+- Correction des URLs de déploiement pour GitHub Pages
+  - Mise à jour de l'URL dans la propriété "homepage" de package.json pour pointer vers `portfolio-v2` au lieu de `portfolio`
+  - Correction des URLs dans les méta-tags et le lien de redirection de la page 404
+  - Correction du manifest.json pour ne référencer que les fichiers d'icônes qui existent réellement
+  - Ces modifications résolvent les erreurs 404 qui empêchaient le chargement des ressources JS, CSS et du manifest
+
 ### Fichiers créés/modifiés
 - `.github/workflows/deploy.yml`
-- `package.json`
-- `public/index.html`
-- `public/404.html`
 
 ### Changements apportés
 - Configuration du déploiement automatique vers GitHub Pages
