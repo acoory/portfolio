@@ -2,6 +2,23 @@
 
 ## 11 juillet 2024
 
+### Fichiers créés/modifiés
+- `.github/workflows/deploy.yml`
+- `package.json`
+- `public/index.html`
+- `public/404.html`
+
+### Changements apportés
+- Configuration du déploiement automatique vers GitHub Pages
+  - Ajout d'un workflow GitHub Actions pour déployer le site automatiquement à chaque push
+  - Ajout de la propriété "homepage" dans package.json pour indiquer l'URL de déploiement
+  - Ajout des scripts "predeploy" et "deploy" dans package.json
+  - Installation de la dépendance "gh-pages" pour faciliter le déploiement
+  - Configuration du routage pour SPA (Single Page Application) sur GitHub Pages
+  - Création d'un fichier 404.html pour gérer les redirections
+
+Ces modifications permettent de déployer automatiquement le portfolio sur GitHub Pages à chaque push sur la branche main. Le site sera accessible à l'adresse https://isoardimarius.github.io/portfolio/.
+
 ### Fichiers modifiés
 - `src/App.css`
 - `src/App.tsx`

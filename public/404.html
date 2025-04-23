@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirection vers le portfolio</title>
+  <script type="text/javascript">
+    // Redirection simple pour GitHub Pages SPA
+    var segmentCount = 1;
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body>
+  <h1>Redirection en cours...</h1>
+  <p>Si vous n'êtes pas redirigé automatiquement, <a href="https://isoardimarius.github.io/portfolio/">cliquez ici</a>.</p>
+</body>
+</html> 
