@@ -3,28 +3,34 @@ import { Project } from '../types/types';
 export const projects: Project[] = [
   {
     id: 'project1',
-    title: 'Projet 1',
-    period: 'Jan 2023 - Mars 2023',
-    description: 'Avec la sortie du OpenAI GPT Store, j\'ai décidé de construire un SaaS qui permet aux utilisateurs de collecter des adresses email de leurs utilisateurs GPT.',
-    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Stripe'],
-    websiteUrl: 'https://exemple.com'
+    title: 'Application de Vidéosurveillance IA',
+    period: 'Août 2024 - Présent',
+    description: 'Application de vidéosurveillance intelligente pour entreprises, connectée à un moteur d\'IA détectant des incidents critiques (intrusions, incendies, comportements anormaux). Architecture distribuée, temps réel et hautement résiliente.',
+    technologies: ['Spring Boot', 'Go', 'Flask', 'React Native', 'PostgreSQL', 'Redis', 'AWS'],
+    websiteUrl: 'https://igaar.fr'
   },
   {
     id: 'project2',
-    title: 'Projet 2',
-    period: 'Juin 2022 - Présent',
-    description: 'Conception, développement et vente de composants UI animés pour les développeurs.',
-    technologies: ['React', 'TypeScript', 'TailwindCSS', 'PostgreSQL', 'Stripe'],
-    websiteUrl: 'https://exemple.com',
-    sourceUrl: 'https://github.com/exemple'
+    title: 'Opsoweb',
+    period: 'Décembre 2023 - Présent',
+    description: 'Application métier web destinée aux polices municipales, permettant la gestion des opérations et le suivi des interventions.',
+    technologies: ['Spring Boot', 'React', 'Java', 'TypeScript'],
+    websiteUrl: 'https://hexacoffre.fr'
   },
   {
     id: 'project3',
-    title: 'Projet 3',
-    period: 'Avril 2022 - Sept 2022',
-    description: 'Développement d\'une plateforme open-source de logging et d\'analyse pour OpenAI.',
-    technologies: ['React', 'TypeScript', 'Prisma', 'PostgreSQL', 'TailwindCSS'],
-    websiteUrl: 'https://exemple.com',
-    sourceUrl: 'https://github.com/exemple'
+    title: 'API gRPC pour Plateforme Existante',
+    period: 'Janvier 2023 - Décembre 2023',
+    description: 'Développement d\'une API basée sur gRPC pour les développeurs d\'un client, facilitant l\'intégration des fonctionnalités de la plateforme existante et améliorant l\'expérience utilisateur.',
+    technologies: ['Ruby on Rails', 'gRPC', 'PostgreSQL'],
+    websiteUrl: 'https://subclic.com'
+  },
+  {
+    id: 'project4',
+    title: 'Solution Digitale pour Restauration',
+    period: 'Février 2023 - Décembre 2023',
+    description: 'Conception et déploiement d\'une solution sur mesure pour un client du secteur de la restauration, visant à digitaliser ses opérations et améliorer son image en ligne.',
+    technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'MySQL', 'Docker', 'Ansible'],
+    websiteUrl: 'https://digital-express.fr'
   }
 ]; 

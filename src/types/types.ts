@@ -4,7 +4,9 @@ export interface Experience {
   logo: string;
   role: string;
   period: string;
+  location?: string;
   description?: string;
+  richDescription?: React.ReactNode;
 }
 
 export interface Education {

@@ -3,26 +3,26 @@ import { Education } from '../types/types';
 export const education: Education[] = [
   {
     id: 'edu1',
-    institution: 'Université X',
-    logo: 'U',
-    degree: 'Master en Informatique',
-    period: '2016 - 2021',
-    description: 'Spécialisation en développement web et intelligence artificielle.'
+    institution: 'Epitech',
+    logo: 'E',
+    degree: 'Master 2 (M2) en Informatique, Master Pro Cloud',
+    period: 'Juin 2022 - Août 2025',
+    description: 'Formation approfondie sur les technologies cloud, la virtualisation, et l\'infrastructure as code.'
   },
   {
     id: 'edu2',
-    institution: 'Université Y',
-    logo: 'U',
-    degree: 'Master en Commerce',
-    period: '2016 - 2021',
-    description: 'Spécialisation en marketing digital et entrepreneuriat.'
+    institution: 'OpenClassrooms',
+    logo: 'O',
+    degree: 'BTS en Programmation / Développement informatique',
+    period: '2022',
+    description: 'Formation sur les fondamentaux du développement web et les bonnes pratiques de programmation.'
   },
   {
     id: 'edu3',
-    institution: 'Baccalauréat International',
-    logo: 'I',
-    degree: 'Baccalauréat International',
-    period: '2012 - 2016',
-    description: 'Programme international avec spécialisation en sciences et mathématiques.'
+    institution: 'Amazon Web Services (AWS)',
+    logo: 'A',
+    degree: 'AWS Certified Cloud Practitioner',
+    period: 'Sept. 2024 - Sept. 2027',
+    description: 'Certification validant les connaissances fondamentales des services AWS, de la sécurité cloud et de l\'architecture cloud.'
   }
 ]; 

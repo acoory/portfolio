@@ -8,22 +8,36 @@ interface ExperienceProps {
 }
 
 const ExperienceItem: React.FC<{ experience: ExperienceType }> = ({ experience }) => {
-  return (
-    <motion.div className="experience-item" variants={itemVariant}>
-      <motion.div 
-        className="company-logo"
-        whileHover={companyLogoHover}
-      >
-        {experience.logo}
-      </motion.div>
-      <div className="experience-content">
-        <h3>{experience.company}</h3>
-        <p className="date">{experience.period}</p>
-        <p className="job-title">{experience.role}</p>
-        {experience.description && <p className="description">{experience.description}</p>}
-      </div>
-    </motion.div>
-  );
+    const { richDescription, description } = experience;
+
+    let descriptionContent = null;
+    if (richDescription) {
+        descriptionContent = (
+            <div className="experience-rich-description">{richDescription}</div>
+        );
+    } else if (description) {
+        descriptionContent = (
+            <p className="description">{description}</p>
+        );
+    }
+
+    return (
+        <motion.div className="experience-item" variants={itemVariant}>
+            <motion.div
+                className="company-logo"
+                whileHover={companyLogoHover}
+            >
+                {experience.logo}
+            </motion.div>
+            <div className="experience-content">
+                <h3>{experience.company}</h3>
+                <p className="date">{experience.period}</p>
+                {experience.location && <p className="location">{experience.location}</p>}
+                <p className="job-title">{experience.role}</p>
+                {descriptionContent}
+            </div>
+        </motion.div>
+    );
 };
 
 const Experience: React.FC<ExperienceProps> = ({ experiences }) => {

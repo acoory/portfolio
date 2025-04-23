@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp } from '../animations/variants';
 
 interface AboutProps {
-  content: string;
+  children: ReactNode;
 }
 
-const About: React.FC<AboutProps> = ({ content }) => {
+const About: React.FC<AboutProps> = ({ children }) => {
   return (
     <motion.section 
       id="about" 
@@ -17,7 +17,9 @@ const About: React.FC<AboutProps> = ({ content }) => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <h2>À propos</h2>
-      <p>{content}</p>
+      <div className="about-content">
+        {children}
+      </div>
     </motion.section>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
 
@@ -39,13 +39,8 @@ function App() {
     }
   }, [darkMode]);
 
-  // Contenu de la section À propos
-  const aboutContent = `Fin 2022, j'ai quitté mon poste d'ingénieur logiciel pour me consacrer à plein temps à la création et au développement de mes propres entreprises SaaS. 
-  Par le passé, j'ai poursuivi un double diplôme en informatique et en commerce, j'ai effectué des stages dans de grandes entreprises technologiques, 
-  et j'ai participé à plus de 20 hackathons pour le plaisir.`;
-
   // Message de la section Contact
-  const contactMessage = "Vous voulez discuter ? Envoyez-moi simplement un message direct avec une question sur Twitter et je répondrai dès que possible. J'ignorerai toute sollicitation.";
+  const contactMessage = "Vous souhaitez discuter d'une opportunité professionnelle ou d'une collaboration ? Je suis particulièrement intéressé par les postes de Cloud Engineer, mais reste ouvert aux missions fullstack. N'hésitez pas à me contacter via LinkedIn ou par email.";
 
   return (
     <div className={`App ${darkMode ? 'dark' : 'light'}`}>
@@ -56,13 +51,51 @@ function App() {
         variants={pageTransition}
       >
         <Header 
-          name="Prénom Nom" 
-          subtitle="Développeur Web devenu Entrepreneur. J'adore construire des applications et aider les gens. Très actif sur Twitter." 
-          initials="PN" 
+          name="Isoardi Marius" 
+          subtitle="Développeur Fullstack avec une forte sensibilité DevOps / Cloud." 
+          initials="MI" 
         />
 
         <main className="main">
-          <About content={aboutContent} />
+          <About>
+            <p>Actuellement en poste chez <strong>Hexacoffre</strong> en tant que développeur fullstack.</p>
+            
+            <p>Je travaille sur des projets techniques mêlant backend, frontend et infrastructure. Certifié <strong>AWS Cloud Practitioner</strong>, je m'oriente activement vers les métiers du Cloud, avec l'objectif de monter en expertise.</p>
+            
+            <div className="stack-container">
+              <p className="stack-title">Stack Dev :</p>
+              <div className="stack-items">
+                <span className="stack-item">Spring Boot</span>
+                <span className="stack-item">Express</span>
+                <span className="stack-item">Flask</span>
+                <span className="stack-item">React</span>
+                <span className="stack-item">Java</span>
+                <span className="stack-item">JS</span>
+                <span className="stack-item">TS</span>
+                <span className="stack-item">Go</span>
+                <span className="stack-item">gRPC</span>
+                <span className="stack-item">Redis</span>
+                <span className="stack-item">MySQL</span>
+              </div>
+            </div>
+            
+            <div className="stack-container">
+              <p className="stack-title">Stack Ops :</p>
+              <div className="stack-items">
+                <span className="stack-item">Terraform</span>
+                <span className="stack-item">Kubernetes</span>
+                <span className="stack-item">Ansible</span>
+                <span className="stack-item">Docker</span>
+                <span className="stack-item">GitLab CI/CD</span>
+                <span className="stack-item">GitHub Actions</span>
+                <span className="stack-item">AWS</span>
+                <span className="stack-item">Azure</span>
+              </div>
+            </div>
+            
+            <p>Je privilégie un poste de <strong>Cloud Engineer</strong> tout en restant ouvert aux missions fullstack.</p>
+          </About>
+
           <Experience experiences={experiences} />
           <Education educationList={education} />
           <Skills skills={skills} />
