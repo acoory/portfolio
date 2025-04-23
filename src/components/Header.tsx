@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { headerVariant, logoHover } from '../animations/variants';
+import { logoHover } from '../animations/variants';
 
 interface HeaderProps {
   name: string;

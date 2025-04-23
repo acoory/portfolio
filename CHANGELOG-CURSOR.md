@@ -3,9 +3,16 @@
 ## 11 juillet 2024
 
 ### Fichiers modifiés
+- `src/components/Header.tsx` 
+- `src/components/TopNavbar.tsx`
 - `.github/workflows/deploy.yml`
 
 ### Changements apportés
+- Correction des erreurs ESLint qui causaient l'échec du build
+  - Suppression de l'import non utilisé `headerVariant` dans `Header.tsx`
+  - Suppression de l'import et de l'utilisation non nécessaires de `useTheme` dans `TopNavbar.tsx`
+  - Modification du workflow GitHub Actions pour définir `CI=false` et éviter que les avertissements ESLint soient traités comme des erreurs fatales
+
 - Mise à jour des actions GitHub dans le workflow de déploiement
   - Passage de `actions/checkout` de v3 à v4
   - Passage de `actions/setup-node` de v3 à v4

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
 
 const TopNavbar: React.FC = () => {
-  const { darkMode } = useTheme();
   const [activeSection, setActiveSection] = useState<string>('accueil');
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
