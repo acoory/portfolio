@@ -16,6 +16,7 @@ import Hackathons from './components/Hackathons';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import TopNavbar from './components/TopNavbar';
 
 // Données
 import { experiences } from './data/experiences';
@@ -27,7 +28,7 @@ import { hackathons } from './data/hackathons';
 // Animations
 import { pageTransition } from './animations/variants';
 
-function App() {
+const App: React.FC = () => {
   const { darkMode } = useTheme();
 
   // Appliquer la classe dark/light à l'élément html
@@ -44,6 +45,7 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? 'dark' : 'light'}`}>
+      <TopNavbar />
       <motion.div
         className="container main-container"
         initial="hidden"
@@ -109,6 +111,6 @@ function App() {
       <Navbar />
     </div>
   );
-}
+};
 
 export default App;

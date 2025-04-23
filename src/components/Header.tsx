@@ -64,8 +64,11 @@ const Header: React.FC<HeaderProps> = ({ name, subtitle, initials }) => {
   
   return (
     <motion.header 
+      id="accueil"
       className="header"
-      variants={headerVariant}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <div className="intro">
         <h1 style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>

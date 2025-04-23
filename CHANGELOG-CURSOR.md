@@ -4,8 +4,30 @@
 
 ### Fichiers modifiés
 - `src/App.css`
+- `src/App.tsx`
+- `src/components/TopNavbar.tsx`
+- `src/components/Header.tsx`
 
 ### Changements apportés
+- Ajout d'une barre de navigation principale en haut (TopNavbar)
+  - Création d'un composant `TopNavbar.tsx` minimaliste et responsive
+  - Design épuré avec logo, liens de navigation et menu burger sur mobile
+  - Détection de la section active lors du défilement
+  - Animation fluide et transitions harmonieuses
+  - Styles cohérents avec la charte graphique de l'application
+
+- Ajout de styles CSS pour la TopNavbar
+  - Design avec effet de flou (backdrop-filter)
+  - Transition fluide du menu mobile
+  - Animation de l'indicateur de section active
+  - Menu hamburger animé pour mobile
+  - Adaptation responsive complète
+
+- Intégration dans l'application
+  - Ajout de la TopNavbar dans `App.tsx`
+  - Ajout d'un ID "accueil" sur le composant Header pour la navigation
+  - Ajustement de l'espacement pour compenser la hauteur de la navbar fixe
+
 - Modification de la couleur des cartes en mode sombre
   - Remplacement de `--card-dark: #1f2937;` par `--card-dark: #181825;`
   - La nouvelle couleur est plus foncée et comporte une légère teinte indigo/violet
@@ -18,7 +40,7 @@
   - Amélioration de l'effet de survol sur les icônes (ombre plus prononcée, élévation accrue)
   - Correction des sélecteurs pour respecter la structure des classes de l'application
 
-Ces changements renforcent la cohérence visuelle dans toute l'application, particulièrement en mode sombre, où les cartes et la barre de navigation suivent désormais la même charte graphique que les autres éléments de l'interface.
+Ces changements renforcent la cohérence visuelle et améliorent l'expérience utilisateur en facilitant la navigation entre les différentes sections du portfolio.
 
 ## 2023-07-04
 

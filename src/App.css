@@ -648,3 +648,228 @@ body {
   left: 0;
   color: var(--primary);
 }
+
+/* TopNavbar - navigation principale en haut */
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(247, 247, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.15);
+  border-bottom: 1px solid rgba(79, 70, 229, 0.08);
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+}
+
+.App.dark .top-navbar {
+  background-color: rgba(24, 24, 36, 0.85);
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.25);
+  border-bottom: 1px solid rgba(79, 70, 229, 0.15);
+}
+
+.top-navbar-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-letter {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  background-image: var(--gradient-primary);
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
+.App.dark .logo-text {
+  color: var(--text-dark);
+}
+
+/* Navigation desktop */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+  cursor: pointer;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: all 0.3s ease;
+}
+
+.App.dark .nav-link {
+  color: var(--text-dark);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-image: var(--gradient-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Menu toggle pour mobile */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.hamburger {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-light);
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.App.dark .hamburger span {
+  background-color: var(--text-dark);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Menu mobile */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(247, 247, 255, 0.95);
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.1);
+}
+
+.App.dark .mobile-menu {
+  background-color: rgba(24, 24, 36, 0.95);
+}
+
+.mobile-nav-link {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  color: var(--text-light);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.App.dark .mobile-nav-link {
+  color: var(--text-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+  background-color: rgba(79, 70, 229, 0.05);
+}
+
+.mobile-nav-link:hover {
+  color: var(--primary);
+  background-color: rgba(79, 70, 229, 0.05);
+}
+
+/* Ajustement pour l'espace de la navbar fixe */
+.main-container {
+  margin-top: 5rem;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .top-navbar {
+    padding: 0.5rem 0;
+  }
+  
+  .logo-letter {
+    width: 32px;
+    height: 32px;
+    font-size: 1.25rem;
+  }
+  
+  .logo-text {
+    font-size: 1.1rem;
+  }
+}
