@@ -193,13 +193,13 @@ body {
   gap: 1.5rem;
 }
 
-.experience-item, .education-item, .hackathon-item {
+.experience-item, .education-item, .realisation-item {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
 }
 
-.company-logo, .education-logo, .hackathon-logo {
+.company-logo, .education-logo, .realisation-logo {
   width: 36px;
   height: 36px;
   background-color: var(--border-light);
@@ -213,7 +213,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.company-logo:hover, .education-logo:hover, .hackathon-logo:hover {
+.company-logo:hover, .education-logo:hover, .realisation-logo:hover {
   background-image: var(--gradient-primary);
   color: white;
   transform: translateY(-2px) scale(1.05);
@@ -222,29 +222,29 @@ body {
 
 .App.dark .company-logo,
 .App.dark .education-logo,
-.App.dark .hackathon-logo {
+.App.dark .realisation-logo {
   background-color: var(--border-dark);
   color: var(--text-secondary-dark);
 }
 
 .App.dark .company-logo:hover,
 .App.dark .education-logo:hover,
-.App.dark .hackathon-logo:hover {
+.App.dark .realisation-logo:hover {
   background-image: var(--gradient-primary);
   color: white;
 }
 
-.experience-content, .education-content, .hackathon-content {
+.experience-content, .education-content, .realisation-content {
   flex: 1;
 }
 
-.experience-content h3, .education-content h3, .hackathon-content h3 {
+.experience-content h3, .education-content h3, .realisation-content h3 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
-.hackathon-content h4 {
+.realisation-content h4 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
@@ -406,19 +406,19 @@ body {
   text-decoration: none;
 }
 
-/* Hackathons */
-.hackathons-container {
+/* Realisations */
+.realisations-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 1.5rem;
 }
 
-.hackathon-item {
+.realisation-item {
   margin-bottom: 0.5rem;
 }
 
-.hackathon-content .description {
+.realisation-content .description {
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
@@ -852,11 +852,6 @@ body {
   background-color: rgba(79, 70, 229, 0.05);
 }
 
-/* Ajustement pour l'espace de la navbar fixe */
-.main-container {
-  margin-top: 5rem;
-}
-
 /* Responsive */
 @media (max-width: 767px) {
   .top-navbar {
@@ -871,5 +866,97 @@ body {
   
   .logo-text {
     font-size: 1.1rem;
+  }
+}
+
+/* Contact Section */
+.contact-intro {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact-info {
+  margin: 0 auto 2rem;
+  max-width: 500px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.contact-info a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  background-color: var(--card-light);
+  color: var(--text-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.App.dark .social-link {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.social-icon svg {
+  height: 22px;
+  width: 22px;
+}
+
+.social-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .social-links {
+    gap: 1rem;
+    justify-content: space-around;
+  }
+  
+  .social-link {
+    flex-direction: column;
+    padding: 1rem;
+    width: 100px;
+    text-align: center;
+  }
+  
+  .social-icon {
+    margin-bottom: 0.5rem;
+  }
+  
+  .social-name {
+    font-size: 0.8rem;
   }
 }

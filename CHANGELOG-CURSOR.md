@@ -148,3 +148,42 @@ Ces changements renforcent la cohérence visuelle et améliorent l'expérience u
 
 ### Résumé des améliorations
 Les modifications apportées rétablissent l'effet de survol sur les icônes de la barre de navigation, ce qui améliore l'interaction utilisateur et rend l'interface plus intuitive. L'ajout d'effets visuels (transformation, ombre, changement de couleur) renforce le feedback visuel lorsque l'utilisateur interagit avec les éléments de navigation.
+
+- Fichier modifié : src/components/Realisations.tsx
+  - La description des réalisations est maintenant enveloppée dans un div avec la classe 'experience-rich-description', pour un rendu visuel cohérent avec la richDescription des expériences.
+  - Aucun autre changement n'a été effectué.
+
+- Fichier modifié : src/data/realisations.ts
+  - Suppression des styles inline dans les descriptions des réalisations.
+  - Utilisation d'une structure JSX cohérente avec la classe 'experience-rich-description' (balise <p className="project-title"> et <ul>/<li> sans style inline).
+  - Correction des apostrophes et de la syntaxe JSX pour éviter les erreurs de parsing.
+  - Aucun autre changement n'a été effectué.
+
+- Fichiers créés/modifiés :
+  - `src/data/socialLinks.ts` (nouveau)
+  - `src/components/Navbar.tsx`
+  - `src/components/Contact.tsx`
+  - `src/App.css`
+
+- Changements apportés :
+  - Création d'un système centralisé de gestion des liens sociaux et informations de contact
+  - Configuration des URLs, icônes, et attributs d'affichage dans un fichier unique
+  - Refonte du composant Navbar pour utiliser les liens sociaux depuis la configuration centralisée
+  - Amélioration du composant Contact avec affichage des liens sociaux, email et téléphone
+  - Ajout de styles CSS pour la section Contact et les liens sociaux
+  - Ajout de fonctionnalités de filtrage pour déterminer quels liens afficher dans la navbar vs la section contact
+  - Meilleure expérience utilisateur avec animations et styles cohérents
+
+- Fichiers modifiés :
+  - `src/components/TopNavbar.tsx`
+  - `src/data/socialLinks.ts` (recréé)
+  - `src/components/Contact.tsx` (ajustement)
+  - `src/App.tsx`
+
+- Changements apportés :
+  - Ajout de la section Contact à la navigation principale (TopNavbar)
+  - Recréation du fichier de configuration centralisée pour les liens sociaux 
+  - Simplification du contenu de socialLinks.ts pour éviter les erreurs
+  - Utilisation du message de contact depuis le fichier centralisé
+  - Amélioration du composant Contact pour utiliser les liens sociaux sans référencer spécifiquement email/téléphone
+  - Meilleure cohérence de navigation à travers le site

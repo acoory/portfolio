@@ -36,14 +36,14 @@ export interface Project {
   sourceUrl?: string;
 }
 
-export interface Hackathon {
+export interface Realisation {
   id: string;
   name: string;
   logo: string;
   displayName: string;
   period: string;
   location: string;
-  description: string;
+  description: React.ReactNode;
 }
 
 export interface ThemeContextType {

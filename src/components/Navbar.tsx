@@ -2,9 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 import { buttonHover, buttonTap } from '../animations/variants';
+import {getNavbarLinks} from "../data/socialLinks";
 
 const Navbar: React.FC = () => {
   const { darkMode, toggleTheme } = useTheme();
+  const navbarLinks = getNavbarLinks();
 
   return (
     <motion.nav 
@@ -14,58 +16,20 @@ const Navbar: React.FC = () => {
       transition={{ delay: 0.6, duration: 0.5 }}
     >
       <div className="navbar-container">
-        <motion.a 
-          href="#" 
-          className="nav-icon"
-          whileHover={buttonHover}
-          whileTap={buttonTap}
-          aria-label="Accueil"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" />
-          </svg>
-        </motion.a>
-
-        {/*Stack overflow*/}
-        <motion.a
-          href="https://stackoverflow.com/users/19590717/marius-isoardi"
-          className="nav-icon"
-          whileHover={buttonHover}
-          whileTap={buttonTap}
-          aria-label="Stack Overflow"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" height="34" width="34" fill="currentColor">
-            <path className="st0" d="M84.4 93.8V70.6h7.7v30.9H22.6V70.6h7.7v23.2z"/>
-            <path className="st1"
-                  d="M38.8 68.4l37.8 7.9 1.6-7.6-37.8-7.9-1.6 7.6zm5-18l35 16.3 3.2-7-35-16.4-3.2 7.1zm9.7-17.2l29.7 24.7 4.9-5.9-29.7-24.7-4.9 5.9zm19.2-18.3l-6.2 4.6 23 31 6.2-4.6-23-31zM38 86h38.6v-7.7H38V86z"/>
-          </svg>
-        </motion.a>
-
-        <motion.a
-          href="https://github.com/IsoardiMarius"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav-icon"
-          whileHover={buttonHover}
-          whileTap={buttonTap}
-          aria-label="GitHub"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
-          </svg>
-        </motion.a>
-
-        <motion.a
-          href="https://www.linkedin.com/in/marius-isoardi-057338233/"
-          className="nav-icon"
-          whileHover={buttonHover}
-          whileTap={buttonTap}
-          aria-label="LinkedIn"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-          </svg>
-        </motion.a>
+        {navbarLinks.map((link, index) => (
+          <motion.a
+            key={index + link.name}
+            href={link.url}
+            className="nav-icon"
+            whileHover={buttonHover}
+            whileTap={buttonTap}
+            aria-label={link.ariaLabel}
+            target={link.url.startsWith("http") ? "_blank" : undefined}
+            rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
+          >
+            {link.icon}
+          </motion.a>
+        ))}
         
         <motion.button 
           onClick={toggleTheme} 

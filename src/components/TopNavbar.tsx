@@ -13,6 +13,8 @@ const TopNavbar: React.FC = () => {
     { id: 'education', label: 'Formation' },
     { id: 'skills', label: 'Compétences' },
     { id: 'projects', label: 'Projets' },
+    { id: 'realisations', label: 'Réalisations' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   useEffect(() => {
@@ -25,7 +27,7 @@ const TopNavbar: React.FC = () => {
       for (let i = sectionsElements.length - 1; i >= 0; i--) {
         const section = sectionsElements[i] as HTMLElement;
         if (section && scrollPosition >= section.offsetTop) {
-          const id = section.getAttribute('id') || '';
+          const id = section.getAttribute('id') ?? '';
           if (id && id !== activeSection) {
             setActiveSection(id);
           }

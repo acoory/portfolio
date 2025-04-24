@@ -46,7 +46,7 @@ Raffinement du design pour mieux correspondre au portfolio de référence
 
 Les modifications incluent :
 - Restructuration des sections pour suivre la même organisation
-- Ajout de logos pour les entreprises, écoles et hackathons
+- Ajout de logos pour les entreprises, écoles et realisations
 - Refonte du style en version plus minimaliste et professionnelle
 - Optimisation de la présentation des projets et expériences
 - Amélioration de la hiérarchie visuelle et de la typographie

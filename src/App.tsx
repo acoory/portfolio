@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
 
@@ -12,46 +12,25 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Hackathons from './components/Hackathons';
+import Realisations from './components/Realisations';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import TopNavbar from './components/TopNavbar';
-import PortfolioTour from './components/PortfolioTour';
 
 // Données
 import { experiences } from './data/experiences';
 import { education } from './data/education';
 import { skills } from './data/skills';
 import { projects } from './data/projects';
-import { hackathons } from './data/hackathons';
+import { realisations } from './data/realisations';
+import { contactMessage } from './data/socialLinks';
 
 // Animations
 import { pageTransition } from './animations/variants';
 
 const App: React.FC = () => {
   const { darkMode } = useTheme();
-  const [showTour, setShowTour] = useState(true);
-  const [visitedBefore, setVisitedBefore] = useState(false);
-
-  // Vérifie si l'utilisateur a déjà visité le site
-  useEffect(() => {
-    const hasVisited = localStorage.getItem('hasVisitedPortfolio');
-    if (hasVisited) {
-      setVisitedBefore(true);
-      setShowTour(false);
-    } else {
-      // Pour les nouveaux visiteurs, on affichera d'abord le tutoriel
-      setVisitedBefore(false);
-      setShowTour(true);
-    }
-  }, []);
-
-  const handleTourComplete = () => {
-    setShowTour(false);
-    // Marquer comme visité pour les prochaines visites
-    localStorage.setItem('hasVisitedPortfolio', 'true');
-  };
 
   // Appliquer la classe dark/light à l'élément html
   useEffect(() => {
@@ -61,9 +40,6 @@ const App: React.FC = () => {
       document.documentElement.classList.remove('dark');
     }
   }, [darkMode]);
-
-  // Message de la section Contact
-  const contactMessage = "Vous souhaitez discuter d'une opportunité professionnelle ou d'une collaboration ? Je suis particulièrement intéressé par les postes de Cloud Engineer, mais reste ouvert aux missions fullstack. N'hésitez pas à me contacter via LinkedIn ou par email.";
 
   return (
     <div className={`App ${darkMode ? 'dark' : 'light'}`}>
@@ -124,7 +100,7 @@ const App: React.FC = () => {
           <Education educationList={education} />
           <Skills skills={skills} />
           <Projects projects={projects} />
-          <Hackathons hackathons={hackathons} />
+          <Realisations realisations={realisations} />
           <Contact message={contactMessage} />
         </main>
         
@@ -132,10 +108,6 @@ const App: React.FC = () => {
       </motion.div>
       <Navbar />
 
-      {/* Tutoriel pour les nouveaux visiteurs */}
-      {!visitedBefore && showTour && (
-        <PortfolioTour onComplete={handleTourComplete} />
-      )}
     </div>
   );
 };
