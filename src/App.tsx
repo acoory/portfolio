@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
 
@@ -17,6 +17,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import TopNavbar from './components/TopNavbar';
+import PortfolioTour from './components/PortfolioTour';
 
 // Données
 import { experiences } from './data/experiences';
@@ -30,6 +31,27 @@ import { pageTransition } from './animations/variants';
 
 const App: React.FC = () => {
   const { darkMode } = useTheme();
+  const [showTour, setShowTour] = useState(true);
+  const [visitedBefore, setVisitedBefore] = useState(false);
+
+  // Vérifie si l'utilisateur a déjà visité le site
+  useEffect(() => {
+    const hasVisited = localStorage.getItem('hasVisitedPortfolio');
+    if (hasVisited) {
+      setVisitedBefore(true);
+      setShowTour(false);
+    } else {
+      // Pour les nouveaux visiteurs, on affichera d'abord le tutoriel
+      setVisitedBefore(false);
+      setShowTour(true);
+    }
+  }, []);
+
+  const handleTourComplete = () => {
+    setShowTour(false);
+    // Marquer comme visité pour les prochaines visites
+    localStorage.setItem('hasVisitedPortfolio', 'true');
+  };
 
   // Appliquer la classe dark/light à l'élément html
   useEffect(() => {
@@ -53,9 +75,9 @@ const App: React.FC = () => {
         variants={pageTransition}
       >
         <Header 
-          name="Isoardi Marius" 
-          subtitle="Développeur Fullstack avec une forte sensibilité DevOps / Cloud." 
-          initials="MI" 
+          name="Marius Isoardi"
+          subtitle="Développeur Fullstack avec une forte sensibilité DevOps / Cloud."
+          initials="MI"
         />
 
         <main className="main">
@@ -109,6 +131,11 @@ const App: React.FC = () => {
         <Footer />
       </motion.div>
       <Navbar />
+
+      {/* Tutoriel pour les nouveaux visiteurs */}
+      {!visitedBefore && showTour && (
+        <PortfolioTour onComplete={handleTourComplete} />
+      )}
     </div>
   );
 };

@@ -1,5 +1,27 @@
 # CHANGELOG - CURSOR
 
+## 2024-07-18
+
+### Fichiers vérifiés
+- `src/components/PortfolioTour.tsx`
+
+### Vérifications effectuées
+- Vérification du centrage des tooltips pour la première et dernière étape du tutoriel
+  - Confirmation que la fonction `positionTooltip` contient déjà la logique nécessaire pour centrer le tooltip
+  - La condition `currentStep === 0 || currentStep === tourSteps.length - 1` est présente et fonctionnelle
+  - Aucune modification nécessaire car la fonctionnalité est déjà implémentée correctement
+
+## 2024-07-12
+
+### Fichiers modifiés
+- `src/components/PortfolioTour.tsx`
+
+### Changements apportés
+- Amélioration du comportement du tutoriel interactif
+  - Modification de la fonction `positionTooltip` pour garantir que la première et la dernière étape du tutoriel soient toujours centrées au milieu de l'écran
+  - Optimisation du positionnement des tooltips pour les placements 'top' et 'bottom' avec une meilleure gestion du centrage horizontal
+  - Amélioration de l'expérience utilisateur en rendant la progression du tutoriel plus intuitive
+
 ## 11 juillet 2024
 
 ### Fichiers modifiés
@@ -10,6 +32,8 @@
 - `public/index.html`
 - `public/404.html`
 - `public/manifest.json`
+- `src/components/PortfolioTour.tsx`
+- `src/types/custom.d.ts`
 
 ### Changements apportés
 - Correction des erreurs ESLint qui causaient l'échec du build
@@ -30,6 +54,20 @@
   - Correction des URLs dans les méta-tags et le lien de redirection de la page 404
   - Correction du manifest.json pour ne référencer que les fichiers d'icônes qui existent réellement
   - Ces modifications résolvent les erreurs 404 qui empêchaient le chargement des ressources JS, CSS et du manifest
+
+- Ajout d'un tutoriel interactif pour présenter le portfolio
+  - Implémentation d'une visite guidée personnalisée des sections principales du portfolio
+  - Création d'un composant de tour interactif sans dépendances externes (uniquement Framer Motion)
+  - Mise en surbrillance intelligente des éléments ciblés dans le portfolio
+  - Support du mode sombre/clair avec adaptation automatique des couleurs et thèmes
+  - Ajout d'icônes thématiques pour chaque étape du tutoriel
+  - Barre de progression visuelle pour suivre l'avancement de la visite
+  - Conception responsive avec adaptation pour les appareils mobiles
+  - Défilement automatique vers les sections ciblées pour une navigation fluide
+  - Stabilisation de la position des tooltips pour éviter les déplacements brusques entre étapes
+  - Transitions fluides et animations optimisées pour une expérience utilisateur agréable
+  - Interface redimensionnée et optimisée pour différentes tailles d'écran
+  - Sauvegarde de l'état de visite dans localStorage pour ne montrer le tutoriel qu'aux nouveaux visiteurs
 
 ### Fichiers créés/modifiés
 - `.github/workflows/deploy.yml`
@@ -92,7 +130,7 @@ Ces changements renforcent la cohérence visuelle et améliorent l'expérience u
 
 ### Changements apportés
 - Harmonisation des styles entre les barres de navigation (haut et bas)
-- Ajout de l'effet blur (backdrop-filter) sur la navbar du bas
+- Ajout d'un effet blur (backdrop-filter) sur la navbar du bas
 - Amélioration de la cohérence visuelle entre les modes clair et sombre
 - Standardisation de la taille des éléments et des espacements
 - Ajout de styles pour les icônes et les états actifs dans la navbar

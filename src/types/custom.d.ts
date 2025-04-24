@@ -1,0 +1,1 @@
+// Ce fichier contient les déclarations pour les modules sans types TypeScript 
