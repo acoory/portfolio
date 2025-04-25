@@ -238,6 +238,19 @@ body {
   flex: 1;
 }
 
+.experience-content {
+  padding: 20px;
+  border-radius: 10px;
+  background: #ececec;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.App.dark .experience-content {
+  background: #282828;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .experience-content h3, .education-content h3, .realisation-content h3 {
   font-size: 1.1rem;
   font-weight: 600;
@@ -959,4 +972,91 @@ body {
   .social-name {
     font-size: 0.8rem;
   }
+}
+
+.transvert-container {
+  background: linear-gradient(to right, rgba(79, 70, 229, 0.05), rgba(139, 92, 246, 0.05));
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.1);
+  border-left: 4px solid var(--primary);
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transvert-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(79, 70, 229, 0.15);
+}
+
+.App.dark .transvert-container {
+  background: linear-gradient(to right, rgba(79, 70, 229, 0.1), rgba(139, 92, 246, 0.1));
+  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.2);
+}
+
+.transvers-title {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 16px;
+  position: relative;
+  padding-left: 15px;
+  border-left: 3px solid var(--primary);
+  display: inline-flex;
+  align-items: center;
+}
+
+.transvers-title::before {
+  content: "🔍";
+  margin-right: 8px;
+}
+
+.App.dark .transvers-title {
+  color: var(--secondary);
+  border-left: 3px solid var(--secondary);
+}
+
+.transvers-title::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: var(--primary);
+  bottom: -5px;
+  left: 15px;
+  transition: width 0.3s ease;
+}
+
+.App.dark .transvers-title::after {
+  background-color: var(--secondary);
+}
+
+.transvers-title:hover::after {
+  width: 60px;
+}
+
+.transvert-container ul {
+  margin-left: 0 !important;
+  padding-left: 15px;
+}
+
+.transvert-container li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 22px;
+  list-style-type: none;
+}
+
+.transvert-container li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.App.dark .transvert-container li::before {
+  color: var(--secondary);
 }

@@ -13,11 +13,21 @@ export const experiences: Experience[] = [
       <>
         <p className="project-title">Kaydicoiffure.fr :</p>
         <ul>
-          <li>Développement d'un système de gestion de réservations avec <strong>Nodejs</strong>, <strong>Express</strong> et <strong>TypeScript</strong> pour le backend, et gestion de la base de données via <strong>RealizeORM</strong> et <strong>MySQL</strong>.</li>
+          <li>Développement d'un système de gestion de réservations avec <strong>Nodejs</strong>, <strong>Express</strong> et <strong>TypeScript</strong> pour le backend, et gestion de la base de données via <strong>SequelizeORM</strong> et <strong>MySQL</strong>.</li>
           <li>Intégration des paiements avec <strong>StripeAPI</strong> et authentification via <strong>JWT</strong>.</li>
-          <li>Notifications en temps réel gérées par <strong>Socketto</strong> et envoi d'emails automatisés via <strong>Nodemailer</strong>.</li>
+          <li>Notifications en temps réel gérées par <strong>Socketio</strong> et envoi d'emails automatisés via <strong>Nodemailer</strong>.</li>
           <li>Conteneurisation du projet avec <strong>Docker</strong> pour un déploiement simplifié.</li>
         </ul>
+        
+        <div className="transvert-container">
+          <p className="transvers-title">Compétences transverses :</p>
+          <ul>
+            <li>Gestion de projet autonome, prenant en charge tous les aspects du projet, du développement à la mise en production, tout en respectant les attentes du client.</li>
+            <li>Approche orientée client, avec une communication constante pour adapter la solution aux besoins réels du client, et ajuster les fonctionnalités en fonction de son feedback.</li>
+            <li>Première expérience freelance, ayant dû naviguer entre les responsabilités techniques et la relation client, avec un focus sur l'efficacité et la réactivité.</li>
+            <li>Adaptabilité et autonomie, avec une capacité à apprendre rapidement et à résoudre les problèmes en dehors des processus habituels de travail d'une équipe.</li>
+          </ul>
+        </div>
       </>
     )
   },
@@ -38,12 +48,30 @@ export const experiences: Experience[] = [
           <li>Gestion de serveur <strong>Ubuntu</strong> et optimisation des services existants pour des requêtes plus performantes et une meilleure scalabilité.</li>
         </ul>
         
+        <div className="transvert-container">
+          <p className="transvers-title">Compétences transverses :</p>
+          <ul>
+            <li>Communication et écoute active avec les clients pour comprendre les besoins métiers et adapter les solutions techniques.</li>
+            <li>Gestion de projet agile avec un focus sur les résultats et la qualité, tout en respectant les délais.</li>
+            <li>Esprit d'équipe et collaboration continue avec le designers, responsables produits et autres développeurs pour assurer la cohérence du projet.</li>
+          </ul>
+        </div>
+        
         <p className="project-title">Corsica Ferries : React Native</p>
         <ul>
           <li>Développement de fonctionnalité permettant aux invités sur le même billet de demander une clé pour ouvrir la cabine. Envoi de <strong>notifications</strong>push une fois l'invitation acceptée.</li>
           <li>Utilisation d'une app <strong>React</strong> pour un <strong>WebAppBridge</strong>, avec vérification de l'application sur le dispositif de l'utilisateur.</li>
           <li>Implémentation du SDK de <strong>Saito</strong> côté natif pour une ouverture sécurisée via <strong>NFC</strong>, respect strict des normes de <strong>sécurité</strong>.</li>
         </ul>
+        
+        <div className="transvert-container">
+          <p className="transvers-title">Compétences transverses :</p>
+          <ul>
+            <li>Approche centrée sur l'utilisateur, avec une attention particulière portée à l'expérience mobile et à la fluidité de l'interface.</li>
+            <li>Sens de l'innovation, intégration de technologies modernes (NFC, notifications push) pour offrir des fonctionnalités avancées.</li>
+            <li>Gestion des risques et respect des normes de sécurité dans la manipulation de données sensibles.</li>
+          </ul>
+        </div>
         
         <p className="project-title">Pickerr.io/We-pizz.fr : Flutter / Laravel</p>
         <ul>

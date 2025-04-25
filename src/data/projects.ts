@@ -35,6 +35,44 @@ export const projects: Project[] = [
     websiteUrl: 'https://igaar.io'
   },
   {
+    id: 'tuto-ansible',
+    title: 'Tutoriel Ansible',
+    period: 'Février 2024',
+    description: "Guide complet d'installation et configuration d'Ansible sur serveur Debian, couvrant les playbooks, variables, inventaires et plugins.",
+    richDescription: React.createElement(React.Fragment, null,
+      React.createElement('p', null, React.createElement('strong', null, 'Guide pratique'), " pour l'installation et la configuration d'Ansible, couvrant :"),
+      React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
+        React.createElement('li', null, 'Installation sur serveur Debian'),
+        React.createElement('li', null, 'Création et organisation des playbooks'),
+        React.createElement('li', null, 'Gestion des variables et inventaires'),
+        React.createElement('li', null, 'Utilisation des modules et plugins'),
+        React.createElement('li', null, "Bonnes pratiques d'automatisation")
+      )
+    ),
+    technologies: ['Ansible'],
+    // websiteUrl: 'https://pepper-trumpet-e77.notion.site/Tutoriel-Ansbile-1118e581ed678043a684d02d90424851?pvs=4',
+    sourceUrl: 'https://github.com/acoory/ansible_deploy_automatically_boilerplate'
+  },
+  {
+    id: 'jobboard',
+    title: 'JobBoard - Plateforme de recrutement',
+    period: 'Decembre 2023',
+    description: "Une plateforme complète de gestion d'offres d'emploi permettant aux entreprises de publier des annonces et aux candidats de postuler.",
+    richDescription: React.createElement(React.Fragment, null,
+      React.createElement('p', null, React.createElement('strong', null, "Plateforme complète de recrutement"), " avec fonctionnalités pour candidats et entreprises :"),
+      React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
+        React.createElement('li', null, "Frontend développé avec React.js et interface responsive"),
+        React.createElement('li', null, "Backend API RESTful avec Node.js et Express"),
+        React.createElement('li', null, "Authentification sécurisée avec JWT"),
+        React.createElement('li', null, "Publication et recherche d'offres d'emploi"),
+        React.createElement('li', null, "Gestion des candidatures et des favoris"),
+        React.createElement('li', null, "Architecture complète avec Docker pour le déploiement")
+      )
+    ),
+    technologies: ['React.js', 'Node.js', 'Express', 'MySQL', 'JWT', 'SCSS', 'Docker', 'JavaScript'],
+    sourceUrl: 'https://github.com/acoory/JobBoard-BackEnd-FrontEnd'
+  },
+  {
     id: 'spotify-oauth',
     title: 'Spotify Web - OAuth 2.0',
     period: 'Mars 2023',
@@ -52,24 +90,6 @@ export const projects: Project[] = [
     technologies: ['React', 'JavaScript', 'OAuth2.0', 'API Spotify', 'CSS', 'HTML'],
     websiteUrl: '',
     sourceUrl: 'https://github.com/acoory/Spotify-web-OAuth2.0'
-  },
-  {
-    id: 'react-native-social',
-    title: 'Clone Interfaces - Twitter, Instagram, Spotify',
-    period: 'Novembre 2022',
-    description: "Intégration des pages principales de Twitter, Instagram et Spotify dans une seule application mobile. L'objectif de ce projet était de reproduire les interfaces emblématiques de ces plateformes tout en respectant leurs designs uniques et leurs comportements spécifiques.",
-    richDescription: React.createElement(React.Fragment, null,
-      React.createElement('p', null, React.createElement('strong', null, "Application mobile multi-interfaces"), " qui met en avant mes compétences en intégration d'interfaces utilisateur et gestion de styles variés :"),
-      React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
-        React.createElement('li', null, "Reproduction fidèle des interfaces principales de Twitter, Instagram et Spotify"),
-        React.createElement('li', null, "Respect des designs spécifiques à chaque plateforme"),
-        React.createElement('li', null, "Implémentation des comportements caractéristiques de chaque application"),
-        React.createElement('li', null, "Gestion efficace des styles et des composants"),
-        React.createElement('li', null, "Navigation intuitive entre les différentes interfaces")
-      )
-    ),
-    technologies: ['React Native', 'JavaScript', 'CSS', 'Navigation', 'UI/UX'],
-    sourceUrl: 'https://github.com/acoory/ReactNative_Twitter_Instagram_Spotify'
   },
   {
     id: 'react-native-deliveroo',
@@ -108,22 +128,21 @@ export const projects: Project[] = [
     sourceUrl: 'https://github.com/acoory/ReactNative-MangaApp'
   },
   {
-    id: 'tuto-ansible',
-    title: 'Tutoriel Ansible',
-    period: 'Février 2024 - Février 2024',
-    description: "Guide complet d'installation et configuration d'Ansible sur serveur Debian, couvrant les playbooks, variables, inventaires et plugins.",
+    id: 'react-native-social',
+    title: 'Clone Interfaces - Twitter, Instagram, Spotify',
+    period: 'Novembre 2022',
+    description: "Intégration des pages principales de Twitter, Instagram et Spotify dans une seule application mobile. L'objectif de ce projet était de reproduire les interfaces emblématiques de ces plateformes tout en respectant leurs designs uniques et leurs comportements spécifiques.",
     richDescription: React.createElement(React.Fragment, null,
-      React.createElement('p', null, React.createElement('strong', null, 'Guide pratique'), " pour l'installation et la configuration d'Ansible, couvrant :"),
+      React.createElement('p', null, React.createElement('strong', null, "Application mobile multi-interfaces"), " qui met en avant mes compétences en intégration d'interfaces utilisateur et gestion de styles variés :"),
       React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
-        React.createElement('li', null, 'Installation sur serveur Debian'),
-        React.createElement('li', null, 'Création et organisation des playbooks'),
-        React.createElement('li', null, 'Gestion des variables et inventaires'),
-        React.createElement('li', null, 'Utilisation des modules et plugins'),
-        React.createElement('li', null, "Bonnes pratiques d'automatisation")
+        React.createElement('li', null, "Reproduction fidèle des interfaces principales de Twitter, Instagram et Spotify"),
+        React.createElement('li', null, "Respect des designs spécifiques à chaque plateforme"),
+        React.createElement('li', null, "Implémentation des comportements caractéristiques de chaque application"),
+        React.createElement('li', null, "Gestion efficace des styles et des composants"),
+        React.createElement('li', null, "Navigation intuitive entre les différentes interfaces")
       )
     ),
-    technologies: ['Ansible'],
-    // websiteUrl: 'https://pepper-trumpet-e77.notion.site/Tutoriel-Ansbile-1118e581ed678043a684d02d90424851?pvs=4',
-    sourceUrl: 'https://github.com/acoory/ansible_deploy_automatically_boilerplate'
+    technologies: ['React Native', 'JavaScript', 'CSS', 'Navigation', 'UI/UX'],
+    sourceUrl: 'https://github.com/acoory/ReactNative_Twitter_Instagram_Spotify'
   },
 ]; 
