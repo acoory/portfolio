@@ -50,7 +50,7 @@
   - Résolution de l'erreur de dépréciation liée à `actions/upload-artifact: v3`
 
 - Correction des URLs de déploiement pour GitHub Pages
-  - Mise à jour de l'URL dans la propriété "homepage" de package.json pour pointer vers `portfolio-v2` au lieu de `portfolio`
+  - Mise à jour de l'URL dans la propriété "homepage" de package.json pour pointer vers `portfolio` au lieu de `portfolio`
   - Correction des URLs dans les méta-tags et le lien de redirection de la page 404
   - Correction du manifest.json pour ne référencer que les fichiers d'icônes qui existent réellement
   - Ces modifications résolvent les erreurs 404 qui empêchaient le chargement des ressources JS, CSS et du manifest

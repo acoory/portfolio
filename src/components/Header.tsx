@@ -71,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ name, subtitle, initials }) => {
       transition={{ duration: 0.5 }}
     >
       <div className="intro">
-        <h1 style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+        <h1 style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', paddingTop: '70px' }}>
           <motion.div
             variants={textVariants}
             initial="hidden"
