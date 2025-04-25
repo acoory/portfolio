@@ -46,7 +46,7 @@ const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
       id="experience" 
       className="section"
       variants={fadeInUp}
-      initial="hidden"
+      initial="visible"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
