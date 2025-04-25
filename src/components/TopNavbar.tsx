@@ -13,7 +13,7 @@ const TopNavbar: React.FC = () => {
     { id: 'education', label: 'Formation' },
     { id: 'skills', label: 'Compétences' },
     { id: 'projects', label: 'Projets' },
-    { id: 'realisations', label: 'Réalisations' },
+    // { id: 'realisations', label: 'Réalisations' },
     { id: 'contact', label: 'Contact' },
   ];
 
