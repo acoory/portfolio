@@ -3,7 +3,22 @@ import React from 'react';
 
 export const projects: Project[] = [
   {
-    id: 'project1',
+    id: 'Kaydidicoiffure',
+    title: 'Kaydidicoiffure',
+    period: 'Mai 2025',
+    description: 'Site web pour un salon de coiffure, avec une interface utilisateur moderne et une gestion des réservations en ligne.',
+    technologies: ['React', 'Tailwind', 'Node.js', 'Express', 'MySQL', 'Docker', 'Nginx', 'ubuntu', 'Tailwind'],
+    richDescription: React.createElement(React.Fragment, null,
+      React.createElement('p', null, 'Site web pour un salon de coiffure, avec une interface utilisateur moderne et une gestion des réservations en ligne.'),
+      React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
+        React.createElement('li', null, 'Interface utilisateur moderne'),
+        React.createElement('li', null, 'Gestion des réservations en ligne')
+      )
+    ),
+    websiteUrl: 'https://kaydidicoiffure.fr'
+  },
+  {
+    id: 'igaar-vizion',
     title: 'Igaar Vizion',
     period: 'Août 2024 - Présent',
     description: 'Système de vidéosurveillance intelligent pour entreprises, utilisant l\'IA pour détecter des incidents critiques (intrusions, incendies). Architecture temps réel et résiliente.',
@@ -16,116 +31,99 @@ export const projects: Project[] = [
       ),
       React.createElement('p', null, 'Architecture distribuée, ', React.createElement('em', null, 'hautement résiliente'), ' et conçue pour le traitement en temps réel.')
     ),
-    technologies: ['Spring Boot', 'Go', 'Flask', 'React Native', 'PostgreSQL', 'Redis', 'AWS'],
-    websiteUrl: 'https://igaar.fr'
+    technologies: ['Spring Boot', 'Go', 'Flask','React', 'React Native', 'PostgreSQL', 'Redis', 'AWS', 'Docker', 'Tailwind'],
+    websiteUrl: 'https://igaar.io'
   },
   {
-    id: 'le-bouddoir',
-    title: 'Le Bouddoir',
-    period: 'Mai 2023 - Juin 2023',
-    description: 'Site web dynamique pour un restaurant à Aix-en-Provence, offrant une expérience fluide pour consulter menus, horaires et réservations en ligne.',
+    id: 'spotify-oauth',
+    title: 'Spotify Web - OAuth 2.0',
+    period: 'Mars 2023',
+    description: "Application intégrée à l'API externe de Spotify. Le projet comprend l'implémentation de l'authentification OAuth2 permettant aux utilisateurs de se connecter en toute sécurité avec leurs comptes Spotify. Une fois authentifiés, les utilisateurs peuvent interagir avec l'API pour rechercher des morceaux, créer des playlists et accéder à leurs données musicales.",
     richDescription: React.createElement(React.Fragment, null,
-        React.createElement('p', null, React.createElement('strong', null, 'Site web dynamique'), ' pour un restaurant à Aix-en-Provence, avec :'),
-        React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
-            React.createElement('li', null, 'Présentation attrayante des menus et spécialités'),
-            React.createElement('li', null, 'Système de réservation en ligne intuitif'),
-            React.createElement('li', null, 'Galerie photo immersive'),
-            React.createElement('li', null, 'Informations pratiques (horaires, adresse, contact)')
-        ),
-        React.createElement('p', null, 'Développé avec ', React.createElement('em', null, 'React.js'), ' et ', React.createElement('em', null, 'Tailwind CSS'), ', déployé avec Docker et Ansible.')
-    ),
-    technologies: ['React', 'Tailwind CSS', 'Nginx', 'Docker', 'Ansible'],
-    websiteUrl: 'https://restaurant-lebouddoir-aix.fr/'
-  },
-  {
-    id: 'digital-express',
-    title: 'DigitalExpress',
-    period: 'Décembre 2023 - Présent',
-    description: 'Solution SaaS pour les restaurateurs permettant de moderniser leur présence en ligne, gérer les réservations et recueillir les retours clients.',
-    richDescription: React.createElement(React.Fragment, null,
-      React.createElement('p', null, 'Solution ', React.createElement('strong', null, 'SaaS complète'), ' pour les restaurateurs, permettant de :'),
+      React.createElement('p', null, React.createElement('strong', null, "Application web Spotify"), " complète avec authentification OAuth2 :"),
       React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
-        React.createElement('li', null, 'Moderniser leur présence en ligne'),
-        React.createElement('li', null, 'Gérer efficacement les réservations'),
-        React.createElement('li', null, 'Mettre en valeur les menus digitaux'),
-        React.createElement('li', null, 'Recueillir et analyser les retours clients')
-      ),
-      React.createElement('p', null, 'Déploiement ', React.createElement('em', null, 'cloud-native'), ' avec infrastructure entièrement automatisée.')
+        React.createElement('li', null, "Implémentation de l'authentification OAuth2.0"),
+        React.createElement('li', null, "Interface utilisateur intuitive pour la recherche de morceaux"),
+        React.createElement('li', null, "Création et gestion de playlists personnalisées"),
+        React.createElement('li', null, "Accès sécurisé aux données musicales de l'utilisateur"),
+        React.createElement('li', null, "Utilisation avancée d'API tierces")
+      )
     ),
-    technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'MySQL', 'Docker', 'Ansible', 'Nginx', 'Linux', 'Tailwind'],
-    websiteUrl: 'https://dashboard.digital-express.cloud/'
+    technologies: ['React', 'JavaScript', 'OAuth2.0', 'API Spotify', 'CSS', 'HTML'],
+    websiteUrl: '',
+    sourceUrl: 'https://github.com/acoory/Spotify-web-OAuth2.0'
   },
   {
-    id: 'your-job',
-    title: 'Your Job',
-    period: 'Mars 2024 - Avril 2024',
-    description: 'Développement frontend d’une plateforme web de recherche d’emploi, dans le cadre d’une mission freelance, avec intégration de maquettes et architecture maintenable.',
+    id: 'react-native-social',
+    title: 'Clone Interfaces - Twitter, Instagram, Spotify',
+    period: 'Novembre 2022',
+    description: "Intégration des pages principales de Twitter, Instagram et Spotify dans une seule application mobile. L'objectif de ce projet était de reproduire les interfaces emblématiques de ces plateformes tout en respectant leurs designs uniques et leurs comportements spécifiques.",
     richDescription: React.createElement(React.Fragment, null,
-        React.createElement('p', null, 'Développement du ', React.createElement('strong', null, 'frontend d’une application web de recherche d’emploi'), ' en mission freelance.'),
-        React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
-            React.createElement('li', null, 'Initialisation du projet avec React et TypeScript'),
-            React.createElement('li', null, 'Mise en œuvre des principes SOLID et Clean Architecture'),
-            React.createElement('li', null, 'Intégration fidèle des maquettes fournies'),
-            React.createElement('li', null, 'Développement de composants réutilisables'),
-            React.createElement('li', null, 'Respect des bonnes pratiques de performance et d’accessibilité'),
-            React.createElement('li', null, 'Collaboration étroite avec le client pour les ajustements fonctionnels')
-        )
+      React.createElement('p', null, React.createElement('strong', null, "Application mobile multi-interfaces"), " qui met en avant mes compétences en intégration d'interfaces utilisateur et gestion de styles variés :"),
+      React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
+        React.createElement('li', null, "Reproduction fidèle des interfaces principales de Twitter, Instagram et Spotify"),
+        React.createElement('li', null, "Respect des designs spécifiques à chaque plateforme"),
+        React.createElement('li', null, "Implémentation des comportements caractéristiques de chaque application"),
+        React.createElement('li', null, "Gestion efficace des styles et des composants"),
+        React.createElement('li', null, "Navigation intuitive entre les différentes interfaces")
+      )
     ),
-    technologies: ['React', 'TypeScript', 'Clean Architecture', 'Tailwind CSS'],
-    websiteUrl: 'https://your-job.fr'
+    technologies: ['React Native', 'JavaScript', 'CSS', 'Navigation', 'UI/UX'],
+    sourceUrl: 'https://github.com/acoory/ReactNative_Twitter_Instagram_Spotify'
   },
   {
-    id: 'la-panthere-seo',
-    title: 'La Panthère SEO',
-    period: 'Mars 2024 - Avril 2024',
-    description: 'Optimisation SEO d\'un site à faible visibilité, améliorant vitesse de chargement, accessibilité et taille des pages. Analyse comparative des performances.',
+    id: 'react-native-deliveroo',
+    title: 'Clone Deliveroo',
+    period: 'Janvier 2023',
+    description: "Développement d'une application mobile en React Native reproduisant la page principale de Deliveroo. Ce projet visait à démontrer mes compétences en intégration d'interfaces utilisateur complexes et en gestion de données dans un environnement mobile multi-plateformes.",
     richDescription: React.createElement(React.Fragment, null,
-        React.createElement('p', null, 'Projet d\'', React.createElement('strong', null, 'optimisation SEO'), ' complet, comprenant :'),
-        React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
-            React.createElement('li', null, 'Audit technique approfondi du site existant'),
-            React.createElement('li', null, 'Optimisation de la vitesse de chargement (-65%)'),
-            React.createElement('li', null, 'Amélioration de l\'accessibilité (score WCAG AA)'),
-            React.createElement('li', null, 'Réduction de la taille des pages et optimisation des images'),
-            React.createElement('li', null, 'Rapport détaillé comparant les performances avant/après')
-        )
+      React.createElement('p', null, React.createElement('strong', null, "Clone de l'application Deliveroo"), " avec une interface utilisateur similaire et des fonctionnalités de base :"),
+      React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
+        React.createElement('li', null, "Liste des restaurants disponibles"),
+        React.createElement('li', null, "Ajout de restaurants aux favoris pour un accès rapide"),
+        React.createElement('li', null, "Interface utilisateur simple et réactive"),
+        React.createElement('li', null, "Composants réutilisables pour une maintenance facilitée"),
+        React.createElement('li', null, "Gestion efficace des données et de l'état de l'application")
+      )
     ),
-    technologies: ['JavaScript', 'Sass'],
-    websiteUrl: 'https://isoardimarius.github.io/LaPanthere/'
+    technologies: ['React Native', 'JavaScript', 'Component Design', 'State Management'],
+    sourceUrl: 'https://github.com/acoory/ReactNative-Deliveroo'
   },
   {
-    id: 'ohmyfood',
-    title: 'OhMyFood',
-    period: 'Février 2024 - Mars 2024',
-    description: 'Intégration mobile-first d\'une maquette pour startup de restauration, avec animations CSS avancées et adaptation fluide vers desktop/tablette.',
+    id: 'react-native-manga',
+    title: 'Application Manga',
+    period: 'Décembre 2022',
+    description: "Ce projet a été conçu dans le cadre de mon apprentissage de React Native. Les données fournies ne proviennent pas d'une API externe. Cette application nécessite Expo et Node.js pour fonctionner de manière optimale.",
     richDescription: React.createElement(React.Fragment, null,
-        React.createElement('p', null, React.createElement('strong', null, 'Intégration mobile-first'), ' pour une startup de restauration innovante :'),
-        React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
-            React.createElement('li', null, 'Respect strict de la maquette fournie par le designer UI'),
-            React.createElement('li', null, 'Animations CSS complexes sans JavaScript'),
-            React.createElement('li', null, 'Adaptation responsive vers tablette et desktop'),
-            React.createElement('li', null, 'Performance optimisée (98/100 PageSpeed)'),
-            React.createElement('li', null, 'Accessibilité respectant les normes WCAG')
-        )
+      React.createElement('p', null, React.createElement('strong', null, "Application dédiée aux mangas"), " développée pour perfectionner mes compétences en React Native :"),
+      React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
+        React.createElement('li', null, "Exploration et consultation d'une bibliothèque de mangas"),
+        React.createElement('li', null, "Interface utilisateur intuitive et adaptée au contenu"),
+        React.createElement('li', null, "Utilisation de données statiques pour simuler une API"),
+        React.createElement('li', null, "Mise en pratique des concepts fondamentaux de React Native"),
+        React.createElement('li', null, "Expérience d'apprentissage concrète avec un projet réel")
+      )
     ),
-    technologies: ['JavaScript', 'Sass'],
-    websiteUrl: 'https://isoardimarius.github.io/OhMyFood/'
+    technologies: ['React Native', 'Expo', 'JavaScript', 'UI Design'],
+    sourceUrl: 'https://github.com/acoory/ReactNative-MangaApp'
   },
   {
     id: 'tuto-ansible',
     title: 'Tutoriel Ansible',
     period: 'Février 2024 - Février 2024',
-    description: 'Guide complet d\'installation et configuration d\'Ansible sur serveur Debian, couvrant les playbooks, variables, inventaires et plugins.',
+    description: "Guide complet d'installation et configuration d'Ansible sur serveur Debian, couvrant les playbooks, variables, inventaires et plugins.",
     richDescription: React.createElement(React.Fragment, null,
-      React.createElement('p', null, React.createElement('strong', null, 'Guide pratique'), ' pour l\'installation et la configuration d\'Ansible, couvrant :'),
+      React.createElement('p', null, React.createElement('strong', null, 'Guide pratique'), " pour l'installation et la configuration d'Ansible, couvrant :"),
       React.createElement('ul', { style: { listStyleType: 'disc', paddingLeft: '20px' } },
         React.createElement('li', null, 'Installation sur serveur Debian'),
         React.createElement('li', null, 'Création et organisation des playbooks'),
         React.createElement('li', null, 'Gestion des variables et inventaires'),
         React.createElement('li', null, 'Utilisation des modules et plugins'),
-        React.createElement('li', null, 'Bonnes pratiques d\'automatisation')
+        React.createElement('li', null, "Bonnes pratiques d'automatisation")
       )
     ),
     technologies: ['Ansible'],
-    websiteUrl: 'https://pepper-trumpet-e77.notion.site/Tutoriel-Ansbile-1118e581ed678043a684d02d90424851?pvs=4'
+    // websiteUrl: 'https://pepper-trumpet-e77.notion.site/Tutoriel-Ansbile-1118e581ed678043a684d02d90424851?pvs=4',
+    sourceUrl: 'https://github.com/acoory/ansible_deploy_automatically_boilerplate'
   },
 ]; 

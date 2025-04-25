@@ -26,6 +26,8 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         {project.websiteUrl && (
           <motion.a 
             href={project.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={buttonHover}
             whileTap={buttonTap}
           >
@@ -35,6 +37,8 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         {project.sourceUrl && (
           <motion.a 
             href={project.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={buttonHover}
             whileTap={buttonTap}
           >
@@ -64,7 +68,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
       >
-        J'ai travaillé sur différents projets, des sites web simples aux applications web complexes. Voici quelques-uns de mes favoris.
+        J'ai travaillé sur différents projets, des sites web simples aux applications web et mobiles complexes. Voici quelques-uns de mes favoris.
       </motion.p>
       
       <motion.div 

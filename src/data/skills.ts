@@ -1,30 +1,26 @@
 import { Skill } from '../types/types';
 
 export const skills: Skill[] = [
-  // Stack Développement
-  { id: 'skill1', name: 'Spring Boot' },
-  { id: 'skill2', name: 'Express' },
-  { id: 'skill3', name: 'Flask' },
-  { id: 'skill4', name: 'React' },
-  { id: 'skill5', name: 'Java' },
-  { id: 'skill6', name: 'JavaScript' },
-  { id: 'skill7', name: 'TypeScript' },
-  { id: 'skill8', name: 'Go' },
-  { id: 'skill9', name: 'gRPC' },
-  { id: 'skill10', name: 'Redis' },
-  { id: 'skill11', name: 'MySQL' },
-  { id: 'skill12', name: 'Ruby on Rails' },
-  { id: 'skill13', name: 'React Native' },
-  { id: 'skill14', name: 'PostgreSQL' },
+  // LANGUAGES
+  { id: 'lang1', name: 'HTML', category: 'LANGUAGES' },
+  { id: 'lang2', name: 'CSS', category: 'LANGUAGES' },
+  { id: 'lang3', name: 'PHP', category: 'LANGUAGES' },
+  { id: 'lang4', name: 'JAVASCRIPT', category: 'LANGUAGES' },
+  { id: 'lang5', name: 'TYPESCRIPT', category: 'LANGUAGES' },
+  { id: 'lang6', name: 'SQL', category: 'LANGUAGES' },
   
-  // Stack DevOps
-  { id: 'skill15', name: 'Terraform' },
-  { id: 'skill16', name: 'Kubernetes' },
-  { id: 'skill17', name: 'Ansible' },
-  { id: 'skill18', name: 'Docker' },
-  { id: 'skill19', name: 'GitLab CI/CD' },
-  { id: 'skill20', name: 'GitHub Actions' },
-  { id: 'skill21', name: 'AWS' },
-  { id: 'skill22', name: 'Azure' },
-  { id: 'skill23', name: 'Linux' }
+  // FRAMEWORK
+  { id: 'frame1', name: 'REACT - REACTNATIVE', category: 'FRAMEWORK' },
+  { id: 'frame2', name: 'NEXT.JS', category: 'FRAMEWORK' },
+  { id: 'frame3', name: 'EXPRESSJS / NODEJS', category: 'FRAMEWORK' },
+  { id: 'frame4', name: 'FLUTTER / DART', category: 'FRAMEWORK' },
+  { id: 'frame5', name: 'SYMFONY 5', category: 'FRAMEWORK' },
+  
+  // OUTILS
+  { id: 'tool1', name: 'POSTMAN', category: 'OUTILS' },
+  { id: 'tool2', name: 'DOCKER', category: 'OUTILS' },
+  { id: 'tool3', name: 'GIT', category: 'OUTILS' },
+  { id: 'tool4', name: 'FIGMA', category: 'OUTILS' },
+  { id: 'tool5', name: 'MYSQL', category: 'OUTILS' },
+  { id: 'tool6', name: 'REDIS INSIGHT', category: 'OUTILS' }
 ]; 

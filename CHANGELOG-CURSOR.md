@@ -81,7 +81,7 @@
   - Configuration du routage pour SPA (Single Page Application) sur GitHub Pages
   - Création d'un fichier 404.html pour gérer les redirections
 
-Ces modifications permettent de déployer automatiquement le portfolio sur GitHub Pages à chaque push sur la branche main. Le site sera accessible à l'adresse https://isoardimarius.github.io/portfolio/.
+Ces modifications permettent de déployer automatiquement le portfolio sur GitHub Pages à chaque push sur la branche main. Le site sera accessible à l'adresse https://acoory.github.io/portfolio/.
 
 ### Fichiers modifiés
 - `src/App.css`

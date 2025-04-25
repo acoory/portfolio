@@ -49,8 +49,8 @@ const icons = {
 };
 
 // Données de contact principales
-export const contactEmail = "marius.isoardi@example.com";
-export const contactPhone = "+33 6 12 34 56 78";
+export const contactEmail = "anthonycory13@hotmail.com";
+export const contactPhone = "+33 6 17 10 77 88";
 export const contactMessage = "Vous souhaitez discuter d'une opportunité professionnelle ou d'une collaboration ? Je suis particulièrement intéressé par les postes de Cloud Engineer, mais reste ouvert aux missions fullstack. N'hésitez pas à me contacter via LinkedIn ou par email.";
 
 // Liste des liens sociaux
@@ -65,7 +65,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: "Stack Overflow",
-    url: "https://stackoverflow.com/users/19590717/marius-isoardi",
+    url: "https://stackoverflow.com/users/14688113/lhony",
     ariaLabel: "Stack Overflow",
     icon: icons.stackOverflow,
     showInNavbar: true,
@@ -73,7 +73,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: "GitHub",
-    url: "https://github.com/IsoardiMarius",
+    url: "https://github.com/acoory",
     ariaLabel: "GitHub",
     icon: icons.github,
     showInNavbar: true,
@@ -81,7 +81,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/marius-isoardi-057338233/",
+    url: "https://www.linkedin.com/in/anthony-cory-682266190/",
     ariaLabel: "LinkedIn",
     icon: icons.linkedin,
     showInNavbar: true,

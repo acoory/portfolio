@@ -51,56 +51,60 @@ const App: React.FC = () => {
         variants={pageTransition}
       >
         <Header 
-          name="Marius Isoardi"
-          subtitle="Développeur Fullstack avec une forte sensibilité DevOps / Cloud."
-          initials="MI"
+          name="Anthony Cory"
+          subtitle="Développeur Fullstack, passionné par les défis techniques et l’impact utilisateur."
+          initials="AC"
         />
 
         <main className="main">
           <About>
-            <p>Actuellement en poste chez <strong>Hexacoffre</strong> en tant que développeur fullstack.</p>
+            <p>Je m'appelle Anthony Cory, développeur passionné.</p>
             
-            <p>Je travaille sur des projets techniques mêlant backend, frontend et infrastructure. Certifié <strong>AWS Cloud Practitioner</strong>, je m'oriente activement vers les métiers du Cloud, avec l'objectif de monter en expertise.</p>
+            <p>Au-delà de mes compétences techniques, ce qui m'anime vraiment, c'est de participer activement à la construction de projets concrets. Je ne cherche pas à être un simple exécutant : je veux être un acteur à part entière, force de proposition, impliqué de la réflexion à la mise en production.</p>
             
-            <div className="stack-container">
+            <p>Mon objectif ? :</p>
+            <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem', listStyleType: 'disc' }}>
+              <li>Apporter des idées, pas seulement du code</li>
+              <li>M'investir dans des projets qui ont du sens</li>
+              <li>Continuer à apprendre, tout en faisant avancer les autres</li>
+            </ul>
+            
+            {/* <div className="stack-container">
               <p className="stack-title">Stack Dev :</p>
               <div className="stack-items">
-                <span className="stack-item">Spring Boot</span>
-                <span className="stack-item">Express</span>
-                <span className="stack-item">Flask</span>
+                <span className="stack-item">HTML</span>
+                <span className="stack-item">CSS</span>
+                <span className="stack-item">PHP</span>
+                <span className="stack-item">Javascript</span>
+                <span className="stack-item">Typescript</span>
+                <span className="stack-item">SQL</span>
                 <span className="stack-item">React</span>
-                <span className="stack-item">Java</span>
-                <span className="stack-item">JS</span>
-                <span className="stack-item">TS</span>
-                <span className="stack-item">Go</span>
-                <span className="stack-item">gRPC</span>
-                <span className="stack-item">Redis</span>
-                <span className="stack-item">MySQL</span>
+                <span className="stack-item">React Native</span>
+                <span className="stack-item">Next.js</span>
+                <span className="stack-item">Express.js / Node.js</span>
+                <span className="stack-item">Flutter / Dart</span>
+                <span className="stack-item">Symfony 5</span>
               </div>
-            </div>
+            </div> */}
             
-            <div className="stack-container">
+            {/* <div className="stack-container">
               <p className="stack-title">Stack Ops :</p>
               <div className="stack-items">
-                <span className="stack-item">Terraform</span>
-                <span className="stack-item">Kubernetes</span>
-                <span className="stack-item">Ansible</span>
+                <span className="stack-item">Postman</span>
                 <span className="stack-item">Docker</span>
-                <span className="stack-item">GitLab CI/CD</span>
-                <span className="stack-item">GitHub Actions</span>
-                <span className="stack-item">AWS</span>
-                <span className="stack-item">Azure</span>
+                <span className="stack-item">Git</span>
+                <span className="stack-item">Figma</span>
+                <span className="stack-item">MySQL</span>
+                <span className="stack-item">Redis Insight</span>
               </div>
-            </div>
-            
-            <p>Je privilégie un poste de <strong>Cloud Engineer</strong> tout en restant ouvert aux missions fullstack.</p>
+            </div> */}
           </About>
 
           <Experience experiences={experiences} />
           <Education educationList={education} />
           <Skills skills={skills} />
           <Projects projects={projects} />
-          <Realisations realisations={realisations} />
+          {/* <Realisations realisations={realisations} /> */}
           <Contact message={contactMessage} />
         </main>
         

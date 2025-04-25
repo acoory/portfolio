@@ -4,144 +4,71 @@ import { Experience } from '../types/types';
 export const experiences: Experience[] = [
   {
     id: 'exp1',
-    company: 'Igaar',
-    logo: 'I',
-    role: 'Co-fondateur',
-    period: 'Août 2024 - Aujourd\'hui',
-    location: 'Aix-en-Provence, Provence-Alpes-Côte d\'Azur, France',
-    richDescription: (
-        <>
-          <p className="project-title">Développement de la plateforme Igaar Vizion</p>
-          <p>Développement d'une application de vidéosurveillance intelligente pour entreprises, connectée à un moteur d'IA détectant des incidents critiques...</p>
-          <p>Lors d'une alerte, des workflows automatisés sont déclenchés : notifications, archivage vidéo, etc.</p>
-          <ul>
-            <li>Rest API en Spring Boot, PostgreSQL, Redis.</li>
-            <li>Micro-service Go pour la gestion des flux vidéo</li>
-            <li>Micro-service Flask pour la surveillance par IA</li>
-            <li>AWS SQS/SNS</li>
-            <li>WebSockets</li>
-            <li>App mobile React Native</li>
-            <li>Coordination interservices</li>
-            <li>DevOps, SOLID et Clean Architecture</li>
-          </ul>
-        </>
-    )
-  },
-  {
-    id: 'exp2',
-    company: 'HexaCoffre',
-    logo: 'H',
-    role: 'Développeur Full Stack',
-    period: 'Décembre 2023 - Aujourd\'hui',
-    location: 'Marseille, Provence-Alpes-Côte d\'Azur, France · Hybride',
+    company: 'Freelance',
+    logo: 'F',
+    role: 'DEVELOPPEUR FULLSTACK',
+    period: 'Mars - 2025',
+    location: '',
     richDescription: (
       <>
-        <div>
-          <p className="project-title">Modernisation d'une application Android de gestion d'armement</p>
-          <p>Reprise d'un projet existant pour corriger les bugs critiques et fiabiliser la solution utilisée par plusieurs services de police municipale.</p>
-          
-          <ul>
-            <li>Développement en Java / XML pour Android</li>
-            <li>Maintenance corrective et évolutive</li>
-            <li>Coordination avec les fournisseurs hardware</li>
-            <li>Rééquilibrage des priorités : bugs, nouvelles features, déploiement</li>
-            <li>Interaction avec les parties prenantes et utilisateurs finaux</li>
-          </ul>
-        </div>
-        
-        <div>
-          <p className="project-title">Développement d'Opsoweb</p>
-          <p>Participation au développement d'une application métier web destinée aux polices municipales.</p>
-          
-          <ul>
-            <li>Développement en Spring Boot et React</li>
-            <li>Participation à la conception technique</li>
-            <li>Encadrement d'alternants</li>
-            <li>Suivi des tâches et coordination</li>
-            <li>Collaboration étroite avec les équipes métier</li>
-          </ul>
-        </div>
+        <p className="project-title">Kaydicoiffure.fr :</p>
+        <ul>
+          <li>Développement d'un système de gestion de réservations avec <strong>Nodejs</strong>, <strong>Express</strong> et <strong>TypeScript</strong> pour le backend, et gestion de la base de données via <strong>RealizeORM</strong> et <strong>MySQL</strong>.</li>
+          <li>Intégration des paiements avec <strong>StripeAPI</strong> et authentification via <strong>JWT</strong>.</li>
+          <li>Notifications en temps réel gérées par <strong>Socketto</strong> et envoi d'emails automatisés via <strong>Nodemailer</strong>.</li>
+          <li>Conteneurisation du projet avec <strong>Docker</strong> pour un déploiement simplifié.</li>
+        </ul>
       </>
     )
   },
   {
-    id: 'exp5',
-    company: 'Your Job',
-    logo: 'Y',
-    role: 'Développeur Frontend Freelance',
-    period: 'Jan 2025 - Mars 2025',
-    location: 'À distance',
+    id: 'exp2',
+    company: 'Digital-Paca',
+    logo: 'D',
+    role: 'DEVELOPPEUR FULLSTACK - DIGITAL-PACA',
+    period: 'Jan 2023 - Janvier 2025',
+    location: '',
     richDescription: (
-        <>
-          <p className="project-title">Développement de la plateforme Your Job</p>
-          <p>Développement du frontend d’une application web de recherche d’emploi, dans le cadre d’une mission freelance.</p>
-          <ul>
-            <li>Initialisation du projet avec React et TypeScript</li>
-            <li>Application des principes SOLID et Clean Architecture</li>
-            <li>Intégration pixel-perfect des maquettes fournies</li>
-            <li>Création de composants UI réutilisables</li>
-            <li>Optimisation des performances et respect des bonnes pratiques</li>
-            <li>Collaboration directe avec le client pour les ajustements fonctionnels</li>
-          </ul>
-        </>
+      <>
+        <p className="project-title">Maritima.fr : Nextjs / React / Expressjs / Redis / Tailwindcss / Docker / Nginx</p>
+        <ul>
+          <li>Refonte complète avec <strong>Nextjs</strong> pour le web client, <strong>React</strong> pour la console d'administration et <strong>Express</strong> pour le backend.</li>
+          <li>Application entièrement conteneurisée via <strong>Docker</strong> déployement via <strong>CI/CD</strong>.</li>
+          <li>Amélioration du <strong>SEO</strong> et optimisation des performances via les bonnes pratiques <strong>Google</strong>.</li>
+          <li>Gestion de serveur <strong>Ubuntu</strong> et optimisation des services existants pour des requêtes plus performantes et une meilleure scalabilité.</li>
+        </ul>
+        
+        <p className="project-title">Corsica Ferries : React Native</p>
+        <ul>
+          <li>Développement de fonctionnalité permettant aux invités sur le même billet de demander une clé pour ouvrir la cabine. Envoi de <strong>notifications</strong>push une fois l'invitation acceptée.</li>
+          <li>Utilisation d'une app <strong>React</strong> pour un <strong>WebAppBridge</strong>, avec vérification de l'application sur le dispositif de l'utilisateur.</li>
+          <li>Implémentation du SDK de <strong>Saito</strong> côté natif pour une ouverture sécurisée via <strong>NFC</strong>, respect strict des normes de <strong>sécurité</strong>.</li>
+        </ul>
+        
+        <p className="project-title">Pickerr.io/We-pizz.fr : Flutter / Laravel</p>
+        <ul>
+          <li>Notifications push Google : Optimisation pour maximiser l'engagement et la fidélité des utilisateurs.</li>
+          <li>Confidentialité de la galerie d'images : Restructuration complète garantissant une protection renforcée des données.</li>
+          <li>Favoris pour une navigation fluide : Implémentation d'un système de favoris pour un accès rapide et personnalisé aux contenus.</li>
+        </ul>
+      </>
     )
   },
   {
     id: 'exp3',
-    company: 'Digital Express',
-    logo: 'D',
-    role: 'Freelance',
-    period: 'Février 2023 - Décembre 2023',
-    location: 'Aix-en-Provence, Provence-Alpes-Côte d\'Azur, France · À distance',
-    richDescription: (
-        <>
-          <p className="project-title">Solution digitale pour un restaurant</p>
-          <p>Conception et déploiement d'une solution sur mesure pour un client du secteur de la restauration...</p>
-          <ul>
-            <li>Environnement de prod/dev</li>
-            <li>Docker</li>
-            <li>Déploiement Ansible</li>
-            <li>CI/CD</li>
-            <li>React, TS, Node.js, Prisma, MySQL</li>
-            <li>UI Library réutilisable</li>
-            <li>Optimisation SEO</li>
-          </ul>
-        </>
-    )
-  },
-  {
-    id: 'exp4',
-    company: 'Subclic',
-    logo: 'S',
-    role: 'Développeur Full Stack',
-    period: 'Janvier 2023 - Décembre 2023',
-    location: 'Marseille, Provence-Alpes-Côte d\'Azur, France',
+    company: 'Agrove',
+    logo: 'A',
+    role: 'DEVELOPPEUR FRONT-END',
+    period: '2020',
+    location: '',
     richDescription: (
       <>
-        <div>
-          <p className="project-title">Développement d'une API basée sur gRPC</p>
-          <p>Création d'une API pour les développeurs d'un client, facilitant l'intégration des fonctionnalités de la plateforme et améliorant l'expérience utilisateur.</p>
-          
-          <ul>
-            <li>Conception et développement d'une API publique robuste</li>
-            <li>Développement en Ruby on Rails et gRPC</li>
-            <li>Gestion d'une base de données complexe</li>
-            <li>Compatibilité avec les systèmes existants</li>
-            <li>Écriture de tests</li>
-            <li>Bonne compréhension des besoins métiers</li>
-          </ul>
-        </div>
-        
-        <div>
-          <p className="project-title">Maintenance d'une application legacy</p>
-          <p>Correction de bugs et optimisation des performances pour améliorer la stabilité et l'efficacité de l'application.</p>
-          
-          <ul>
-            <li>Développement en Ruby on Rails</li>
-            <li>Debug et optimisation continue</li>
-            <li>Intégration de nouvelles fonctionnalités</li>
-          </ul>
-        </div>
+        <p className="project-title">Agrove : Wordpress</p>
+        <ul>
+          <li>Animation interactive : Création d'animations en utilisant css / javascript pour améliorer l'interactivité et l'engagement des utilisateurs</li>
+          <li>Création de page web : Développement et design de nouvelles page web, responsive</li>
+          <li>Optimisation des performances : Mise en œuvre de technique d'optimisation pour améliorer les temps de chargement des pages</li>
+        </ul>
       </>
     )
   }

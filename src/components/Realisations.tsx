@@ -37,7 +37,7 @@ const Realisations: React.FC<RealisationsProps> = ({ realisations }) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      <h2>Réalisations</h2>
+      {/* <h2>Réalisations</h2>
       <motion.p 
         className="section-intro"
         initial={{ opacity: 0 }}
@@ -66,7 +66,7 @@ const Realisations: React.FC<RealisationsProps> = ({ realisations }) => {
         {realisations.map(realisation => (
           <RealisationItem key={realisation.id} realisation={realisation} />
         ))}
-      </motion.div>
+      </motion.div> */}
     </motion.section>
   );
 };
