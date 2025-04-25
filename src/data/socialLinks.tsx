@@ -51,7 +51,7 @@ const icons = {
 // Données de contact principales
 export const contactEmail = "anthonycory13@hotmail.com";
 export const contactPhone = "+33 6 17 10 77 88";
-export const contactMessage = "Vous souhaitez discuter d'une opportunité professionnelle ou d'une collaboration ? Je suis particulièrement intéressé par les postes de Cloud Engineer, mais reste ouvert aux missions fullstack. N'hésitez pas à me contacter via LinkedIn ou par email.";
+export const contactMessage = "Vous souhaitez discuter d'une opportunité professionnelle ou d'une collaboration ? N'hésitez pas à me contacter via LinkedIn ou par email.";
 
 // Liste des liens sociaux
 export const socialLinks: SocialLink[] = [
